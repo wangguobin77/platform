@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../src/css/refundDetail.css">
+</head>
+<body>
+<!-- 导航开始 -->
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">报表中心</h3>
+            </div>
+        </div>
+        <div class="col-md-6 row-xx">
+             <ul class="m-menu" style="height:64px;">
+                <li class="items cursor" style="min-width:128px;"><a href="javascript:;">商品销售报表</a></li>
+                <li class="items cursor"><a href="javascript:;">订单流水</a></li>
+                <li class="items cursor items-active"><a href="javascript:;">退款流水</a></li>
+                <li class="items cursor"><a href="javascript:;">提成报表</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+           <ul class="col-sm-12">
+                <li class="cursor"><a href="">商品销售报表</a></li>
+                <li class="cursor"><a href="">订单流水</a></li>
+                <li class="cursor"><a href="">退款流水</a></li>
+                <li class="cursor"><a href="">提成报表</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+
+<!-- 内容区 -->
+<div class="container-fluid" style="flex-grow:1;padding:0;width:100%;overflow-y: scroll;">
+
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>退款流水  >  退款详情</h4>
+
+        <div class="right-box">
+            <div class="add-btn cursor btn-back">
+                <a href="refundList.html">返回列表</a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-6 col-md-offset-3" style="padding:0 24px;">
+        <div class="row">
+            <!-- 待支付读秒 -->
+            <div class="col-md-12 dzf">
+                <h5>已退款</h5>
+            </div>
+
+
+            <hr style="margin:0 15px;">
+            <!-- 订单按信息 -->
+            <div class="col-md-12 ddxx">退款单信息</div>
+            <div class="col-md-12 hang">
+                <!-- 订单编号 -->
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">退款单编号：</span>
+                    <span class="col-md-9 sl">51807204011041137</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">退款方式：</span>
+                    <span class="col-md-9 sl">电商</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">创建时间：</span>
+                    <span class="col-md-9 sl">2018-07-22  15:34:03</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">订单编号：</span>
+                    <span class="col-md-9 sl num-upc">51807204011041137</span>
+                </div>
+                 <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">到账时间：</span>
+                    <span class="col-md-9 sl">2018-07-20  15:34:03</span>
+                </div>
+            </div>
+            <hr style="margin:0 15px;">
+
+            <!-- 买家信息 -->
+            <div class="col-md-12 ddxx">买家信息</div>
+            <div class="col-md-12 hang">
+                <!-- 订单编号 -->
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">买家ID：</span>
+                    <span class="col-md-9 sl">51807204011041137</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">真实姓名：</span>
+                    <span class="col-md-9 sl">周大龙</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">联系电话：</span>
+                    <span class="col-md-9 sl">13265322356</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">所在地区：</span>
+                    <span class="col-md-9 sl">黑龙江省/哈尔滨市/鼓楼区</span>
+                </div>
+                 <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">收货方式：</span>
+                    <span class="col-md-9 sl">门店自提</span>
+                </div>
+            </div>
+            <hr style="margin:0 15px;">
+
+            <!-- 商品信息 table -->
+            <div class="col-md-12 ddxx spxx">商品信息</div>
+            <!-- 商品信息标题 -->
+            <div class="col-md-12 hang sp-title">
+                <div class='sp-title-box'>
+                    <h4 style="width:272px;">商品信息</h4>
+                    <h4 style="width:160px;">单价</h4>
+                    <h4 style="width:160px;">数量</h4>
+                    <h4 style="width:160px;">优惠</h4>
+                    <h4 style="width:160px;">实付金额</h4>
+                </div>
+            </div>
+            <div class="col-md-12 hang table-responsive">
+                <table class="sptable response-table">
+                    <tbody>
+                        <tr class="tr-title">
+                            <td colspan="5" class="dssp">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电商商品名称：SENSEPLAY Race pro版
+                                <!-- 出现有商品退货时显示 -->
+                                <span class="yth">已退货</span>
+                            </td>
+                        </tr>
+                        <tr class="trs-sp">
+                            <td class="sp-xx">
+                                <p>
+                                    <span>upc:</span>
+                                    <span class="num-upc">1234567890123</span>
+                                </p>
+                                <p>
+                                    SENSEPLAY Race pro版 星空灰 信号加强版 128G 社交版
+                                </p>
+                                <p class="property-box">
+                                        颜色：星空灰  电池容量：10000毫安  内存：512G保修期：半年
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    ￥1000.00
+                                </p>
+                            </td>
+                            <td>
+                                <p>2</p>
+                            </td>
+                            <td class="price-box">
+                                <p>
+                                    <span>
+                                        积分抵扣：<br>-￥50.00
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        优惠券：<br>-￥50.00
+                                    </span>
+
+                                </p>
+                            </td>
+
+                            <td>
+                                <p>￥1900.00</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                 <table class="sptable">
+                    <tbody>
+                        <tr class="tr-title">
+                            <td colspan="5"  class="dssp">
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;电商商品名称：SENSEPLAYRacer套装
+                                <!-- 出现有商品退货时显示 -->
+                                <span class="yth">已退货</span>
+                            </td>
+                        </tr>
+                        <tr class="trs-sp">
+                            <td class="sp-xx">
+                                <p>
+                                    <span>upc:</span>
+                                    <span class="num-upc">1234567890123</span>
+                                </p>
+                                <p>
+                                    SENSEPLAY Race pro版 星空灰 信号加强版 128G 社交版
+                                </p>
+                                <p class="property-box">
+                                        颜色：星空灰  电池容量：10000毫安  内存：512G保修期：半年
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    ￥1000.00
+                                </p>
+                            </td>
+                            <td rowspan="3">
+                                <p>2</p>
+                            </td>
+                            <td class="price-box" rowspan="3">
+                                <p>
+                                    <span>
+                                        积分抵扣：<br>-￥50.00
+                                    </span>
+                                </p>
+                                <p>
+                                    <span>
+                                        优惠券：<br>-￥50.00
+                                    </span>
+
+                                </p>
+                            </td>
+
+                            <td rowspan="3">
+                                <p>￥2900.00</p>
+                            </td>
+                        </tr>
+                        <tr class="trs-sp">
+                            <td class="sp-xx">
+                                <p>
+                                    <span>upc:</span>
+                                    <span class="num-upc">1234567890123</span>
+                                </p>
+                                <p>
+                                    SENSEPLAY Race pro版 星空灰 信号加强版 128G 社交版
+                                </p>
+                                <p class="property-box">
+                                        颜色：星空灰  电池容量：10000毫安  内存：512G保修期：半年
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    ￥1000.00
+                                </p>
+                            </td>
+
+                        </tr>
+                        <tr class="trs-sp">
+                            <td class="sp-xx">
+                                <p>
+                                    <span>upc:</span>
+                                    <span class="num-upc">1234567890123</span>
+                                </p>
+                                <p>
+                                    SENSEPLAY Race pro版 星空灰 信号加强版 128G 社交版
+                                </p>
+                                <p class="property-box">
+                                        颜色：星空灰  电池容量：10000毫安  内存：512G保修期：半年
+                                </p>
+                            </td>
+                            <td>
+                                <p>
+                                    ￥1000.00
+                                </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- 商品信息end -->
+
+            <!-- 结算信息start -->
+            <div class="col-md-12 hang">
+                <div class="col-md-6 col-md-offset-6 xx-con">
+                    <div class="col-md-10 col-md-offset-1 jsxx">
+                        <span class="col-md-4 sl">商品件数：</span>
+                        <span class="col-md-6 sl">5件</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-6 xx-con">
+                    <div class="col-md-10 col-md-offset-1 jsxx">
+                        <span class="col-md-4 sl">商品总价：</span>
+                        <span class="col-md-6 sl">￥3500.00</span>
+                    </div>
+                </div>
+                <div class="col-md-6 col-md-offset-6 xx-con">
+                    <div class="col-md-10 col-md-offset-1 jsxx">
+                        <span class="col-md-4 sl">全场满减活动：</span>
+                        <span class="col-md-6 sl">-￥150.00</span>
+                    </div>
+                </div>
+                <div class="col-md-5 col-md-offset-6 xx-con je-xian"></div>
+                <!-- 订单总金额 -->
+                <div class="col-md-6 col-md-offset-6 xx-con mj-con">
+                    <div class="col-md-10 col-md-offset-1 jsxx">
+                        <span class="col-md-4 sl">退款金额：</span>
+                        <span class="col-md-6 sl">￥3350.00</span>
+                    </div>
+                </div>
+
+
+            </div>
+            <hr style="margin:0 15px;">
+
+             <!-- 车手信息 -->
+            <div class="col-md-12 ddxx">车手信息</div>
+            <div class="col-md-12 hang">
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">车手姓名：</span>
+                    <span class="col-md-9 sl">徐大模</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">车手工号：</span>
+                    <span class="col-md-9 sl">周大龙</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">联系电话：</span>
+                    <span class="col-md-9 sl">13265322356</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">所在部门：</span>
+                    <span class="col-md-9 sl">黑龙江省/哈尔滨市/鼓楼区</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">提成比例：</span>
+                    <span class="col-md-9 sl">门店自提</span>
+                </div>
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">提成金额：</span>
+                    <span class="col-md-9 sl">门店自提</span>
+                </div>
+            </div>
+            <hr style="margin:0 15px;">
+            <!-- 出库仓信息 -->
+            <div class="col-md-12 ddxx">出库仓信息</div>
+            <div class="col-md-12 hang ckcxx">
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">出库仓名称：</span>
+                    <span class="col-md-9 sl">徐大模</span>
+                </div>
+            </div>
+            <div class="col-md-12 hang ckcxx">
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">联系电话：</span>
+                    <span class="col-md-9 sl">徐大模</span>
+                </div>
+            </div>
+            <div class="col-md-12 hang ckcxx last-ck" style="padding-bottom:88px;">
+                <div class="col-md-6 xx-con">
+                    <span class="col-md-3 sl">出库仓地址：</span>
+                    <span class="col-md-9 sl">徐大模</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../../dist/js/public/bootstrap.min.js"></script>

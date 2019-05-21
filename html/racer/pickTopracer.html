@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+     <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../dist/css/racerList.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/relevanceStaff.css">
+
+</head>
+<body>
+<style type="text/css">
+    .open{
+        background:;
+    }
+</style>
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">车手管理</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-6 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+    <!-- 列表 -->
+    <div class="container-fluid" style="flex-grow:1;padding:0;overflow-y:scroll;overflow-x:hidden;" >
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>车手管理  /  添加车手  /  关联员工</h4>
+            <div class="col-md-6  col-sm-6 col-xs-6 col-md-offset-5" >
+                <div class="row search-boxa" style="padding:0 24px;">
+
+
+                    <div class="col-md-8 col-md-offset-4 ss-kuang" style="padding-left:6.8%;">
+                        <div class="col-md-6 search-box">
+                            <span class=" glyphicon glyphicon-search icon"></span>
+                            <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="ss-upc sl">
+                        </div>
+                        <div class="col-md-3">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="add-btn cursor" style="margin-right:0;">
+                                <a href="racerList.html">返回列表</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 响应式导航下搜索 -->
+                <div class="row search-boxb">
+                    <div class="add-btn cursor">
+                        <a href="racerList.html">返回列表</a>
+                    </div>
+                    <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                    <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+
+                        <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                            <div class="search-box ">
+                                <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                                <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                            </div>
+                            <div class="btn-sousuo">
+                                <div class="btn-ss cursor">搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-8 col-md-offset-2" style="padding:0 24px;">
+            <!-- title -->
+            <div class='table-title'>
+                选择上级车手
+            </div>
+            <div class="table-responsive">
+                <table class="table" id="table">
+                     <thead>
+                        <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                             <th class="sl"  width="160px">员工姓名</th>
+                             <th class="sl"  width="160px">员工工号</th>
+                             <!-- 职位 -->
+                             <th class="drop-down-box cursor"   width="160px">职位 <span class="font_family icon-arrow_down_solid"></span>
+                                <ul class="drop-select" style="position:absolute;top:39px;left:0;">
+                                    <li class="active-ss" style="padding-left:8px;" ><input type="radio" hidden name="male">在职</li>
+                                    <li style="padding-left:8px;"><input type="radio" hidden name="male">离职</li>
+                                </ul>
+                             </th>
+                             <!-- 员工类型 -->
+                             <th class="drop-down-box cursor"  width="160px" >员工类型 <span class="font_family icon-arrow_down_solid"></span>
+                                <ul class="drop-select" style="position:absolute;top:39px;left:0;">
+                                    <li class="active-ss" style="padding-left:8px;" ><input type="radio" hidden name="male">在职</li>
+                                    <li style="padding-left:8px;"><input type="radio" hidden name="male">离职</li>
+                                </ul>
+                             </th>
+                             <!-- 所属部门 -->
+                             <th class="drop-down-box cursor"  width="320px" >所属部门 <span class="font_family icon-arrow_down_solid"></span>
+                                <ul class="drop-select" style="position:absolute;top:39px;left:0;">
+                                    <li class="active-ss" style="padding-left:8px;" ><input type="radio" hidden name="male">在职</li>
+                                    <li style="padding-left:8px;"><input type="radio" hidden name="male">离职</li>
+                                </ul>
+                             </th>
+                             <th class="sl" width="270px">手机号</th>
+
+                        </tr>
+                     </thead>
+
+                     <tbody>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                         <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+
+                        </tr>
+                        <tr>
+                            <td class="sl" width="160px">柳林东</td>
+                            <td class="sl" width="160px">0021</td>
+                            <td class="sl" width="160px">财务总监</td>
+                            <td class="sl" width="160px">普通</td>
+                            <td class="sl" width="320px">财务部(上海）/财务部（深圳2）</td>
+                            <td class="sl" width="270px">13265233254</td>
+                        </tr>
+                     </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row col-md-8 col-md-offset-2" style="padding:0 24px;">
+            <nav clas="footer" aria-label="..."  >
+                <ul class="pagination" style="float:right;">
+                    <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                    <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                    <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="row col-md-8 col-md-offset-2 tj-box">
+            <button type="button" class="con-btn">
+                确认选择
+            </button>
+         </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script>
+    // 列表下拉从菜单
+    $('.drop-down-box').click(function(){
+        $(this).find('.drop-select').toggle().parent('').siblings('').children('ul').css('display','none');
+    })
+    $(document).click(function(e){
+        var con = $('.drop-select');   // 设置目标区域
+        if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+            $(this).css('display','none');
+        }
+
+    })
+
+    // 判断table中关联的员工信息  获取当前点击行的索引 标记选中的标识
+    $(document).ready(function(){
+        $("#table> tbody > tr").click(function(){
+          alert(this.rowIndex);
+          $(this).css('background','rgba(0, 0, 0, 0.04)').siblings('tr').css('background',"#fff");
+        });
+    });
+
+    ///////////////////
+    // 选择了上一级车手后 点击确认选择 返回到addRacer 去 //
+    ///////////////////
+    $('.con-btn').click(function(){
+        window.location.href="addRacer.html";
+    })
+</script>
+
+
+
+
+
+
+
+
+
+

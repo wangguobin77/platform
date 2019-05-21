@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../src/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/addChain.css">
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+       /*  position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999; */
+    }
+    .zz-box .text-box{
+        border: solid 1px rgba(0, 0, 0, 0.15);outline:none;width:104px;border-radius: 4px;text-align:center;line-height:22px;
+    }
+</style>
+
+<!-- 导航开始 -->
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">供应链</h3>
+            </div>
+        </div>
+        <div class="col-md-6 row-xx">
+            <ul class="m-menu" style="height:64px;">
+                <li class="items cursor items-active"><a href="javascript:;">入库</a></li>
+                <li class="items cursor"><a href="javascript:;">出库</a></li>
+                <li class="items cursor"><a href="javascript:;">退货</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+           <ul class="col-sm-12">
+                <li class="cursor"><a href="">入库</a></li>
+                <li class="cursor"><a href="">出库</a></li>
+                <li class="cursor"><a href="">退货</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+
+<!-- 内容区 -->
+<div class="container-fluid" style="flex-grow:1;padding:0;width:100%;">
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>直接入库  /  添加入库</h4>
+
+        <div class="right-box">
+            <div class="add-btn cursor btn-log">
+                <a href="chainLog.html">操作日志</a>
+            </div>
+            <div class="add-btn cursor btn-back">
+                <a href="chainList.html">返回列表</a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+        <div class="row content-wrap" style="margin-bottom:0;">
+
+            <!-- 发分类 -->
+            <div class=" col-md-6 row-xx ">
+                <h4 class="col-md-3 T1RRTittle">入库仓：</h4>
+                <select name=""  class="col-md-9 col-xs-12 input-box select-input" style="outline:none;">
+                    <option value="1">创智天地1号仓</option>
+                    <option value="2">创智天地2号仓</option>
+                    <option value="3">创智天地3号仓</option>
+                    <option value="4">创智天地4号仓</option>
+
+                </select>
+            </div>
+            <!-- 所属机构 -->
+            <div class="col-md-6 row-xx" style="margin-bottom:40px;">
+                <h4 class="col-md-3 T1RRTittle">备注<span>(选填)</span> &nbsp;：</h4>
+                <textarea class="div-textarea col-md-9" style="outline:none;"></textarea>
+            </div>
+        </div>
+
+        <!-- table列表 -->
+        <div class="row content-wrap table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th width="160px"  class="col-md-1 sl">序号</th>
+                        <th width="320px"  class="col-md-1 sl">upc（扫码录入）</th>
+                        <th width="320px"  class="col-md-4 sl">商品名称</th>
+                        <th width="160px"  class="col-md-1 sl">分类 </th>
+                        <th width="160px"  class="col-md-1 sl">入库数量</th>
+                        <th width="160px"  class="col-md-1 sl">操作</th>
+
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="sl">1</td>
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl">创智天地1号仓/创智天地2号仓/创智天地3号 </td>
+                        <td class="sl">遥控器/单手/surf </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl opr-box" >
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+           <!--          <tr>
+                        <td class="sl">2</td>
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl">创智天地1号仓</td>
+                        <td class="sl">遥控器/单手/surf </td>
+
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                         <td class="sl opr-box" >
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">3</td>
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl">创智天地1号仓</td>
+                        <td class="sl">遥控器/单手/surf</td>
+
+                        <td class="sl zz-box">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl opr-box" >
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="sl">合计</td>
+                        <td class="sl zz-box"></td>
+                        <td class="sl"></td>
+                        <td class="sl">3种</td>
+                        <td class="sl zz-box">
+                           240
+                        </td>
+                        <td class="sl opr-box" >
+                        </td>
+                    </tr> -->
+                 </tbody>
+            </table>
+        </div>
+
+        <!-- 保存操作 -->
+
+            <div class="save-box">
+                <button type="button" class="btn-sub">提交</button> <!-- 提交以后可以看到详情 -->
+                <button type="button" class="btn-draft">保存至草稿</button>
+            </div>
+
+    </div>
+</div>
+<!-- 删除提示框 -->
+<div class="del-box">
+    <div class="dialog">
+        <span class="font_family icon-close cursor"></span>
+            <img src="../../../dist/images/warning-large.png" alt="">
+            <h6>是否确认删除?</h6>
+        <div class="operate-del">
+            <div class="cursor cancel"> 取消</div>
+            <div class="cursor confirm">确认</div>
+
+        </div>
+
+    </div>
+</div>
+<!-- 确认要保存到草稿 -->
+<div class="draft-box">
+    <div class="dialog">
+        <span class="font_family icon-close cursor"></span>
+        <img src="../../../images/warning-large.png" alt="">
+        <h6>确定要保存至草稿吗?</h6>
+        <div class="operate-del">
+            <div class="cursor cancel"> 取消</div>
+            <div class="cursor confirm">确认</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../../dist/js/addChain.js"></script>
+<script>
+    // $('.btn-add').click(function(){
+    //     $(this).parent().parent().before(
+    //         "<tr>"+
+    //             "<td class='sl'>"+"x"+"</td>"+
+    //             "<td class='sl zz-box'>"+
+    //                 "<input class='text-box sl' style='border: solid 1px rgba(0, 0, 0, 0.15);outline:none;width:104px;border-radius: 4px;text-align:center;''>"+
+    //             "</td>"+
+    //             "<td class='sl'></td>"+
+    //             "<td class='sl'></td>"+
+    //             "<td class='sl zz-box'>"+
+    //                 "<input class='text-box sl' style='border: solid 1px rgba(0, 0, 0, 0.15);outline:none;width:104px;border-radius: 4px;text-align:center;'>"+
+    //             "</td>"+
+    //             "<td class='sl opr-box'>"+
+    //                 "<span class='font_family icon-operation_delate btn-del cursor'></span>"+
+    //             "</td>"+
+    //         "</tr>"
+    //     )
+    // })
+
+
+    // 信息填写完毕后 提交值审核详情页
+    $('.btn-sub').click(function(){
+        window.location.href="auditDetailList.html";
+    })
+    // 点击保存至草稿箱
+    // $('.btn-draft').click(function(){
+    //     window.location.href="draft.html";
+    // })
+    // 删除提示框
+    $('.table').delegate('.btn-del','click',function(e){
+        e.preventDefault();
+        $('.del-box').show();
+    })
+    $('.del-box').find('.cancel').click(function(){
+        $('.del-box').hide();
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.del-box').hide();
+    })
+    // 删除框操作end
+
+    //扫描upc码 获取skuid及相对应的商品信息  判断table中行数以及操作区删除按键的出现
+    var trs=$('tbody tr');
+    console.dir(trs);
+    if(trs.length>2||trs.length==2){
+        $('.opr-box').find('.btn-del').show();
+
+    }else{
+        $('.opr-box').find('.btn-del').hide();
+    }
+
+    // table中失焦 upc填写失焦时插入一行
+    $('table').delegate('input.text-box','blur',function(){
+        $(this).blur(function (e) {
+            e.preventDefault();
+            var n = $(this).index(),
+            upc_code=$(this).val();
+            alert(n);
+            var str='';
+            str+='<tr>'
+                str+='<td class="sl"></td>'
+                str+='<td class="sl zz-box">'
+                    str+='<input class="text-box sl" >'
+                str+='</td>'
+                str+='<td class="sl">创智天地1号仓</td>'
+                str+='<td class="sl">遥控器/单手/surf </td>'
+
+                str+='<td class="sl zz-box">'
+                    str+='<input class="text-box sl">'
+                str+='</td>'
+                 str+='<td class="sl opr-box">'
+                    str+='<span class="font_family icon-operation_delate btn-del cursor"></span>'
+                str+='</td>'
+            str+='</tr>'
+            $('tbody').append(str);
+
+         })
+    })
+
+
+
+
+
+
+
+
+</script>
+
+<script>
+    $('table').delegate('input.text-box','blur',function(){
+         $(this).blur(function (e) {
+            e.preventDefault();
+            var n = $(this).index(),
+                upc_code=$(this).val();
+                if(upc_code==""){
+                    return;
+                }else{
+                    $.ajax({
+                        url:'<?=Url::toRoute('get-sku-info')?>',
+                        type:'post',
+                        dataType:'json',
+                        data:{'upc_code':upc_code,'_csrf-backend':'<?=Yii::$app->request->csrfToken?>'},
+                        success: function(data) {
+                            console.log(data);
+                            if(data.code==0){
+                                var n = $(this).index();
+                                var str='';
+                                str+='<tr>'
+                                    str+='<td class="sl"></td>'
+                                    str+='<td class="sl zz-box">'
+                                        str+='<input class="text-box sl" name="upc_code">'
+                                    str+='</td>'
+                                    str+='<td class="sl">'+data.data.pname+'</td>'
+                                    str+='<td class="sl">'+data.data.p_category_name +'</td>'
+
+                                    str+='<td class="sl zz-box">'
+                                        str+='<input class="text-box sl" name="stock_in_num">'
+                                    str+='</td>'
+                                     str+='<td class="sl opr-box">'
+                                        str+='<span class="font_family icon-operation_delate btn-del cursor"></span>'
+                                    str+='</td>'
+                                str+='</tr>'
+                                $('tbody').append(str);
+                            }
+                        }
+                    })
+                }
+         })
+    })
+    // 点击确认提交按钮
+    $('button.btn-sub').unbind('click').click(function(){
+        var upc_codes=$("input[name='sku_id']"),// upc值
+            stock_in_num=$("input[name='stock_in_num']");
+            var json = [];
+            var sku_info = {};
+             for(var i=0; i<inputs.length; i++){
+                sku_info.upc_codes = inputs.eq(i).val();
+                sku_info.stock_in_num = stock_in_num.eq(i).val();
+                json.push(sku_info);
+
+            }
+        var jsonStr = JSON.stringify(json);
+        $.ajax({
+            url:'',
+            type:'post',
+            dataType:'json',
+            data:{'_csrf-backend':'<?=Yii::$app->request->csrfToken?>'},
+            success: function(data) {
+            }
+        })
+
+    })
+
+    /*
+        提交end
+     */
+    // 信息填写完毕后 提交值审核详情页
+    $('.btn-sub').click(function(){
+        window.location.href="auditDetailList.html";
+    })
+
+
+    // 信息填写完毕后 提交值审核详情页
+//    $('.btn-sub').click(function(){
+//        window.location.href="auditDetailList.html";
+//    })
+    // 点击保存至草稿箱
+    // $('.btn-draft').click(function(){
+    //     window.location.href="draft.html";
+    // })
+
+    // 删除提示框
+    $('.table').delegate('.btn-del','click',function(e){
+        e.preventDefault();
+        $('.del-box').show();
+    })
+    $('.del-box').find('.cancel').click(function(){
+        $('.del-box').hide();
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.del-box').hide();
+    })
+    // 删除框操作end
+
+    $('.save-box').find('.btn-sub').click(function () {
+
+        var warehouse_id = $("#warehouse_id").val();
+        var remark = $("#remark").val();
+        alert(warehouse_id);return
+        var inputs = $("input[name='sku_id']");
+        var stock_in_quality = $("input[name='stock_in_quality']");
+        console.log();
+        var json = [];
+        var row = {};
+        for(var i=0; i<inputs.length; i++){
+            row.sku_id = inputs.eq(i).val();
+            row.quality = stock_in_quality.eq(i).val();
+            json.push(row);
+            row = {};
+        }
+
+        var jsonStr = JSON.stringify(json);
+        console.log(jsonStr);
+        console.log(opr_amount);
+        console.log(all_amount);
+
+
+        $.ajax({
+            // 验证当前单号是否存在
+            url:'<?=Url::toRoute('stock-in-edit-submit')?>',
+            type:'post',
+            dataType:'json',
+            data:{'remark':remark,'warehouse_id':warehouse_id,'sku_ids':jsonStr,'_csrf-backend':'<?=Yii::$app->request->csrfToken?>'},
+            success: function(data) {
+                console.log(data);
+                if(data.code > 0){
+                    alert(data.message);return
+                }
+                alert(data.message);
+                window.location.href = '<?=Url::toRoute('stock-in-single-confirm')?>?bill_id='+data.data;
+
+            }
+        })
+
+    //扫描upc码 获取skuid及相对应的商品信息  判断table中行数以及操作区删除按键的出现
+    var trs=$('tbody tr');
+    if(trs.length>2||trs.length==2){
+        $('.opr-box').find('.btn-del').show();
+    })
+
+
+    }else{
+        $('.opr-box').find('.btn-del').hide();
+    }
+
+</script>
+
+
+
+
+
+
+
+
+
+
+

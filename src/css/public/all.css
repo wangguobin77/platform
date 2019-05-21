@@ -1,0 +1,153 @@
+/*
+* @Author: Marte
+* @Date:   2018-06-25 11:52:17
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-07-02 16:49:14
+*/
+
+/*
+    判断设备横竖屏
+    媒体查询
+    @media (max-device-width: 480px) and (orientation: landscape)
+    @media screen and (orientation:portrait){ … }
+ */
+.float_left{
+    float: left;
+}
+
+.float_right{
+    float: right;
+}
+.flex{
+    display:flex;
+}
+
+
+// 按钮 样式
+.large_btn_default{
+    width: 120px;
+    height: 40px;
+    background-color: #1890ff;
+    text-align:center;
+    line-height:100%;
+    color:#fff;
+    border-radius:4px;
+    font-size: 14px;
+   font-weight: 500;
+   font-style: normal;
+   font-stretch: normal;
+
+}
+.btn:hover{
+     background-color: #69c0ff;
+}
+.btn_disabled{
+    background-color: rgba(0, 0, 0, 0.25);
+
+}
+.large_line_btn{
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #58666e;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 100%;
+    letter-spacing: normal;
+    text-align: center;
+    color: #58666e;
+}
+
+.large_line_btn_blue{
+    width: 120px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #1890ff;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 100%;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1890ff;
+}
+.large_line_btn_disabled{
+    idth: 120px;
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, 0.25);
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 100%;
+    letter-spacing: normal;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.25);
+}
+
+.middle_btn{
+    width: 120px;
+    height: 32px;
+}
+
+
+// 背景相关颜色
+.link{
+    color:#1890ff;
+    background:#1890ff;
+}
+.warning{
+    color:#faad14;
+    background:#faad14;
+}
+.error{
+    color:#f5222d;
+    background:#f5222d;
+
+}
+.disabled{
+    background:rgba(0, 0, 0, 0.25);
+    color:rgba(0, 0, 0, 0.25);
+
+}
+.hover{
+    background:#69c0ff;
+    color:#69c0ff;
+}
+.selected{
+    background:#e6f7ff;
+    color:#e6f7ff;
+}
+.success{
+    background:#52c41a;
+    color:#52c41a;
+}
+
+/*
+    标题文字
+ */
+.left-logo{
+    float:left;
+}
+.left-logo .icon-menu{
+    font-size:24px;
+    line-height:64px;
+    color:#fff;
+}
+
+/**
+ * 文字出现省略号
+ */
+.sl{
+    overflow: hidden;white-space: nowrap;text-overflow: ellipsis;
+}
+
+
+/* 手型*/
+.cursor{
+    cursor:pointer;
+}

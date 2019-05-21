@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    -webkit-text-size-adjust: 100% !important;
+    text-size-adjust: 100% !important;
+    -moz-text-size-adjust: 100% !important;
+}
+img{
+    border:0;
+    -webkit-touch-callout: none;
+}
+a{
+    text-decoration:none !important;
+}
+button{
+    cursor: pointer;
+}
+
+::-webkit-input-placeholder{ font-size:14px;color: rgba(0, 0, 0, 0.25);}
+ol, ul ,li{list-style: none;}
+html {
+
+    font-family: Open Sans,Helvetica Neue,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,Arial,sans-serif!important;
+
+}
+-webkit-tap-highlight-color:rgba(0,0,0,0);
+::selection             { background:none}
+
+::-moz-selection     { background:none}
+
+::-webkit-selection    { background:none}
+body, dl, dt, dd, ul, ol, li, pre, form, fieldset, input, p, blockquote, th, td {
+
+    margin:0;
+    padding:0;
+}
+h4, .h4, h5, .h5, h6, .h6 {
+    margin: 0px;
+    padding: 0px;
+}
+select {
+font-size:12px;
+}
+table {
+border-collapse:collapse;
+}
+fieldset, img {
+border:0 none;
+}
+fieldset {
+margin:0;
+padding:0;
+}
+fieldset p {
+margin:0;
+padding:0 0 0 8px;
+}
+legend {
+display:none;
+}
+address, caption, em, strong, th, i {
+font-style:normal;
+font-weight:400;
+}
+table caption {
+margin-left:-1px;
+}
+hr {
+border-bottom:1px solid #FFFFFF;
+border-top:1px solid #E4E4E4;
+border-width:1px 0;
+clear:both;
+height:2px;
+margin:5px 0;
+overflow:hidden;
+}
+ol, ul {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+}
+caption, th {
+text-align:left;
+}
+
+/*
+去除input type=number de 箭头
+ */
+
+
+ input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{
+      -webkit-appearance: none !important;
+      margin: 0;
+      }
+
+/*----------input日期选择 用来移除向下箭头----------*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+   /*display: none;*/
+   outline:none;
+   cursor:pointer;
+}
+
+
+/*----------用来移除叉叉按钮----------*/
+input[type="date"]::-webkit-clear-button{
+   display:none;
+
+}
+/*input 选择框禁用时*/
+input.disabled:checked+label::before {
+    background-color: #bfbfbf;
+    background-clip: content-box;
+    padding: .15em;
+    border-color: rgba(0, 0, 0, 0.15);;
+}

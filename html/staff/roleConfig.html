@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" href="../../dist/css/public/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.mobile.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/roleConfig.css">
+
+
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+
+</style>
+<!--导航开始-->
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">基础设置</h3>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <ul class="m-menu" style="height:64px;">
+                <li class="items cursor items-active"><a href="javascript:;">员工管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">职位管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">角色管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">组织/部门管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">权限菜单管理</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+            <ul class="col-sm-12">
+                <li class="cursor"><a href="">员工管理</a></li>
+                <li class="cursor"><a href="">职位管理</a></li>
+                <li class="cursor"><a href="">角色管理</a></li>
+                <li class="cursor"><a href="" style="min-width:105px;">组织/部门管理</a></li>
+                <li class="cursor"><a href="" style="min-width:105px;">权限菜单管理</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+<!--导航结束-->
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>员工管理 / 角色配置 </h4>
+
+        <div class="right-box">
+            <div class="add-btn cursor">
+                <a href="stafflist.html" style="color:#fff;">返回列表</a>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- 内容区 -->
+    <div class="container-fluid main-box" style="flex-grow:1;">
+        <div class="row col-md-6 col-md-offset-3 check-box">
+            <h4 class="T0LSTittle row">总监</h4>
+            <div class="row ">
+                 <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>人力资源总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>财务总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>市场总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>销售总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>研发总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>设计总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>仓储总监</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 职务选择 -->
+        <div class="row col-md-6 col-md-offset-3 check-box">
+            <h4 class="T0LSTittle row">职务</h4>
+            <div class="row ">
+                 <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>采购</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>客服</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>人事</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>行政</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>出纳</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>财务</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>销售</h5>
+                    <div class="tooltips">
+                        <h4>销售相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>众包</h5>
+                    <div class="tooltips">
+                        <h4>仓库相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>表单相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                        <h4>其他相关:</h4>
+                        <span>权限01 / 权限02 / 权限03 /权限04 / 权限05 / 权限06 </span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="row col-md-6 col-md-offset-3 check-box">
+            <h4 class="T0LSTittle row">区域</h4>
+            <div class="row ">
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>上海</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>深圳</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>天津</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>广州</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>江苏</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>香港</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>美国</h5>
+                </div>
+                <div class="xz col-md-2 col-xs-6">
+                    <input type="checkbox" name="item">
+                    <label for="item"></label>
+                    <h5>日本</h5>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 提交按钮 -->
+        <div class="row col-md-6 col-md-offset-3" style="padding-left:0;margin-top:80px;">
+            <button type="button" class="btn-tj">提交</button>
+        </div>
+
+
+
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../dist/js/public/kendo.all.min.js"></script>
+<script src="../../dist/js/staffManage.js"></script>
+
+
+<script>
+
+    $('#example').tooltip();
+
+    $(document).ready(function () {
+        $("#dropdowntree").kendoDropDownTree({
+            placeholder: "请选择",
+            checkboxes: true,
+            checkAll: false,
+            autoClose: false,
+            dataSource: [
+                {
+                    text: "Furniture", expanded: true, items: [
+                        { text: "Tables & Chairs" },
+                        { text: "Sofas" },
+                        { text: "Occasional Furniture" }
+                    ]
+                },
+                {
+                    text: "Decor", items: [
+                        { text: "Bed Linen" },
+                        { text: "Curtains & Blinds" },
+                        { text: "Carpets" }
+                    ]
+                }
+            ]
+        });
+    });
+
+    ////////////
+    // 工具提示信息 //
+    ////////////
+    $('.xz').hover(function() {
+        /* Stuff to do when the mouse enters the element */
+        $(this).find('.tooltips').show();
+    }, function() {
+        /* Stuff to do when the mouse leaves the element */
+         $(this).find('.tooltips').hide();
+    });
+
+
+
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+
+    })
+</script>
+
+
+
+
+

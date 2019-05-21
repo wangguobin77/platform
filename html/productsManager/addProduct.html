@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addDeparent.css">
+
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addProduct.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+    <script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+        function getStrLeng(str){
+            var realLength = 0;
+            var len = str.length;
+            var charCode = -1;
+            for(var i = 0; i < len; i++){
+                charCode = str.charCodeAt(i);
+                if (charCode >= 0 && charCode <= 128) {
+                    realLength += 1;
+                }else{
+                    // 如果是中文则长度加3
+                    realLength += 3;
+                }
+            }
+            return realLength;
+
+        }
+    </script>
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+    }
+</style>
+
+
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">SKU管理</h3>
+            </div>
+        </div>
+        <div class="col-md-6 row-xx">
+            <ul class="m-menu" style="height:64px;">
+                <li class="items cursor items-active"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">电商商品管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">套装管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类管理</a></li>
+
+
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+           <ul class="col-sm-12">
+                <li class="cursor"><a href="">商品管理</a></li>
+                <li class="cursor"><a href="" style="min-width:105px;">电商商品管理</a></li>
+                <li class="cursor"><a href="">套装管理</a></li>
+                <li class="cursor"><a href="">属性管理</a></li>
+                <li class="cursor"><a href=""  >分类管理</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+<!--导航结束-->
+
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;margin-top:64px;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>商品管理/添加商品</h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    <a href="" style="color:#fff;">返回列表</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+            <div class="row content-wrap">
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">商品状态：</h4>
+                     <div class="col-md-8 input-box xiajia sl" style="line-height:40px;border:0;padding-left: 0;">
+                        下架
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">UPC：</h4>
+                     <div class="col-md-8 input-box xiajia sl" style="line-height:40px;border:0;padding-left: 0;">
+                        1234567890123
+                    </div>
+
+                </div>
+
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">商品名称：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入商品名称" class="sl shuru spmc-input">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+
+                </div>
+                <script type="text/javascript">
+                    $('.spmc-input').blur(function(){
+                        alert(1111);
+                        var  val=$(this).val();
+                        if (val.indexOf(" ") != -1|| getStrLeng(val)>1) {
+                            alert('空格');
+                        }else{
+
+                           console.dir( getStrLeng(val));
+                        }
+
+                    })
+                </script>
+                <!-- 发分类 -->
+                <div class=" col-md-6 row-xx ">
+                    <h4 class="col-md-4 T1RRTittle">分类<span>(选填)</span> &nbsp;：</h4>
+                    <select name=""  class="col-md-8 col-xs-12 input-box select-input" style="outline:none;">
+                        <option value="" >分部</option>
+                        <option value="">门店</option>
+                        <option value="">工厂</option>
+                        <option value="">厂商</option>
+
+                    </select>
+                </div>
+
+                <!-- 建议零售价 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">建议零售价(元)<span>(选填)</span> &nbsp;：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入商品名称" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+
+                </div>
+
+                <!-- 所属机构 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">所属机构：</h4>
+                     <div class="col-md-8 input-box xiajia sl" style="line-height:40px;border:0;padding-left: 0;">
+                        深圳隆昌模型制造厂
+                    </div>
+
+                </div>
+
+                <!-- 增加字段 是否使用SN销售 成本价-->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">使用SN销售：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="male" >
+                            <input type="radio" id="male" name="bjjb" value="2" checked  />
+                            <label for="male" style="font-size:14px">是</label>
+                        </div>
+
+                         <div class="male" style="margin-left:38px;">
+                            <input type="radio" id="manu" name="bjjb" value="2"/>
+                            <label for="manu" style="font-size:14px">否</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">成本价(元)<span>(选填)</span> &nbsp;：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入成本价" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!-- 商品图片 -->
+            <div class="row content-wrap" style="margin-bottom:0;">
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">商品图片：</h4>
+                     <div class="col-md-8 input-box xiajia sl" style="line-height:40px;border:0;padding: 0;font-size: 12px;">
+                        图片大小不能超过1MB，分辨率为800X800；第一张图片同时用作缩略图
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="row content-wrap sc-wrap">
+                <div class='sc-box col-md-offset-2 col-md-6' style="padding:0;">
+                   <div class="bg-icon">
+                        <i class='close_box' style="display:block;">
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+
+                            <span class="drag-box">
+                                <span class="glyphicon glyphicon-arrow-left hui-jtou"></span>
+                                <span class="xian"></span>
+                                <span class="glyphicon glyphicon-arrow-right "></span>
+                            </span>
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                    <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                       <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                       <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                       <div class="bg-icon">
+                        <i class='close_box'>
+                            <span class="close-icon"></span>
+                            <img src="" align="top">
+                        </i>
+                        <input type="file" class="input_file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                        <img src="../../dist/images/addicon_big.png" alt="">
+                    </div>
+                </div>
+            </div>
+
+            <!-- 库存信息 -->
+            <div class="row content-wrap" style="margin-bottom:0;">
+                <div class="col-md-6 row-xx" style="margin-bottom:16px;">
+                    <h4 class="col-md-4 T1RRTittle">库存信息：</h4>
+                </div>
+            </div>
+
+            <!-- 库存信息表格 -->
+            <div class="row content-wrap">
+                <div class="table-responsive col-md-offset-2 col-md-6">
+                   <table class="table table-striped table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Street</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Anna Awesome</td>
+                                <td>Broome Street</td>
+                            </tr>
+                            <tr>
+                                <td>Debbie Dallas</td>
+                                <td>Houston Street</td>
+                            </tr>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>Madison Street</td>
+                            </tr>
+                        </tbody>
+                   </table>
+                </div>
+            </div>
+            <!-- 备注信息 -->
+            <div class="row content-wrap">
+                <div class="col-md-2" style="text-align:right;">
+                    备注&nbsp;&nbsp;<span style="color: rgba(0, 0, 0, 0.25);">(选填)</span>：
+                </div>
+                <div class="textarea col-md-10" contenteditable="true"></div>
+
+            </div>
+
+
+            <div class="row content-wrap" style="margin-bottom:0;">
+                <div class="col-md-6 row-xx" style="margin-bottom:16px;">
+                    <h4 class="col-md-4 T1RRTittle"></h4>
+                    <button type="button" class="btn-tj col-md-8">发布</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 点击图片预览区域 -->
+    <div class="del-box container-fluid" >
+        <!-- 关闭 按钮 -->
+        <span class="close-btn font_family icon-close cursor"></span>
+        <div class="tp-yl">
+            <img src="" alt="" class=:"img-zx">
+
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../dist/js/public/kendo.all.min.js"></script>
+<script src="../../dist/js/select.js"></script>
+<!-- <script src="../../dist/js/public/YMDClass.js"></script> -->
+<script src="../../dist/js/public/upload.js"></script>
+<script>
+
+    // 年月日选择
+    // $(function(){
+    //     $(".date").selectDate()
+
+    //     $(".days").focusout(function(){
+    //         var year = $(".year option:selected").html()
+    //         var month = $(".month option:selected").html()
+    //         var day = $(".days option:selected").html()
+    //         console.log(year+month+day)
+    //     })
+    // })
+
+    // new YMDselect('year1','month1','day1');
+
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var _con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+
+    })
+
+// 点击close-icon  事件委派
+$('.close_box').delegate('.close-icon','click',function(e){
+    e.preventDefault();
+    $(this).parent().hide();
+    $(this).parent().find('input[type="hidden"]').attr('value',"");
+    $('.input_file').val('');
+    // window.location.href="";
+
+})
+
+// 点击查看预览大图
+$('.close_box').delegate('img.img-pic','click',function(e){
+    e.preventDefault();
+    var data_src=$(this).attr('data-pic');
+    $('.del-box').show();
+    $('.del-box').find('img').attr('src',data_src);
+
+})
+// 点击预览关闭按钮
+$('.close-btn').click(function(){
+    $(this).parent().hide();
+})
+</script>
+
+
+
+
+

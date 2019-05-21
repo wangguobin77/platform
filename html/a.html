@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+<body>
+<!-- <a href="javascript" class="click">点击</a> -->
+<script src="jquery-3.1.1.min.js" type="text/javascript" charset="utf-8" async defer></script>
+
+
+　　<head>
+　　　　<script language="javascript">
+　　　　　　function sel(obj,group){
+  　　　　　　  var list = [];
+   　　　　　　 var groups = 2;//每一组的个数
+   　　　　　　 //定义的时候按最多的算不够的用0填充
+   　　　　　　 var _TheArray = [
+    　　 　　　　　　　　       [document.getElementById("id1"),document.getElementById("id2")],
+     　　  　　　　　　　　     [document.getElementById("id3"),0],
+   　　　　　　　　　　         [document.getElementById("id4"),document.getElementById("id5")]
+        　　　　　　　　　　　　  ]
+  　　　　　　  for (var i=0;i<_TheArray.length;i++)
+   　　　　　　 {
+    　　　　　　    if(_TheArray[i][0] == obj || _TheArray[i][1] == obj )//不对选中项的同组进行操作
+ 　　　　　　       {
+          　　　　　　  continue;
+     　　　　　　   }
+    　　　　　　    for(var k = 0; k < groups; k++)
+      　　　　　　  {
+        　　　　    _TheArray[i][k].checked = false;
+       　　　　　　 }
+   　　　　　　 }
+　　　　}
+　　</script>
+
+
+</head>
+<body>
+    第一组：r1<input type="checkbox" name="r1" group="r1" id="id1" onClick="sel(this,'r1')"/>
+            r2<input type="checkbox" name="r1"  group="r1" id="id2" onClick="sel(this,'r1')"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;
+    第二组：r3<input type="checkbox" name="r2"  group="r2" id="id3" onClick="sel(this,'r2')"><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+    第三组：r4<input type="checkbox"  name="r3" group="r3" id="id4" onClick="sel(this,'r3')">
+            r5<input type="checkbox"  name="r3" group="r3" id="id5" onClick="sel(this,'r3')"><br/>
+
+<!-- <script src="" type="text/javascript" charset="utf-8" async defer>
+    $('.click').click(function(){
+        var a=[1,2];
+        var b=[2,3];
+        b[0]=a;//把数组a作为b数组的元素传入b数组中
+        alert(b[0][1]); //2
+        console.dir(a);
+
+    })
+</script> -->
+
+</body>
+</html>

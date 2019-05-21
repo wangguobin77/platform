@@ -1,0 +1,60 @@
+/*
+* @Author: Marte
+* @Date:   2018-08-22 15:38:42
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-22 15:59:34
+*/
+.body{
+    display:flex;
+    flex-direction:column;
+}
+.dropdown{
+    width:114px;
+    height:64px;
+    float:right;
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+}
+.dropdown a{
+    display:flex;
+    justify-content:space-between;
+    width:100%;
+    align-items:center;
+}
+.dropdown a span{
+    color:#fff;
+}
+.dropdown a span:nth-child(1){
+    font-size:20px;
+}
+.dropdown .factory-xx{
+    width:80%;
+    text-align:center;
+}
+.org-box{
+    height:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+        flex-grow:1;
+}
+.wrap-org{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    align-items:center;
+}
+.wrap-org a{
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #58666e;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 40px;
+    width:272px;
+    text-align: center;
+    color: #58666e;
+    margin-bottom: 24px;
+}

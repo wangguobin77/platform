@@ -1,0 +1,841 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.mobile.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../dist/css/stafflist.css"> -->
+    <!-- <link rel="stylesheet" type="text/css" href="../../dist/css/commodityManagement.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffDetail.css">
+
+
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    textarea:disabled{
+        background:#fff;
+    }
+    /*
+    卡片列表
+ */
+    body,html{
+        background-color: rgba(0,0,0,.04);
+    }
+    .bottom-menu{
+        background:#fff;
+    }
+    .row .itemss {
+        margin: 0 19px 38px;
+        background-color: #fff;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        box-sizing:border-box;
+        flex:1 1 300px;
+    }
+    .itemss .bh-box{
+        display:flex;
+        flex-direction:column;
+        justify-content: space-around;
+        align-items:center;
+        height:120px;
+        border-bottom:1px solid rgba(0, 0, 0, 0.09);
+        overflow:hidden;
+    }
+
+    .itemss .bh-box span.tx{
+        width:56px;
+        height:56px;
+        border-radius:50%;
+        background-color: #faad14;
+        color:#fff;
+        line-height:56px;
+        text-align:center;
+        overflow:hidden;
+    }
+    .itemss .bh-box:nth-child(2){
+        justify-content:space-around;
+        align-items:flex-start;
+        padding-top:16px;
+        padding-bottom: 7px;
+        box-sizing:border-box;
+        overflow:hidden;
+    }
+    .bh-box .status-box{
+        display:flex;
+        align-items:center;
+    }
+    .bh-box .status-box h4{
+        line-height:24px;
+        color: rgba(0, 0, 0, 0.65);
+        white-space: nowrap;
+    }
+    .bh-box .status-box span{
+        width: 40px;
+        height: 16px;
+        border-radius: 8px;
+        background-color: #52c41a;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 16px;
+        letter-spacing: normal;
+        color: #ffffff;
+        text-align:center;
+        margin-left:8px;
+    }
+
+    .itemss .bh-box:nth-child(2) span{
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: rgba(0, 0, 0, 0.45);
+    }
+    .bh-box .bm-box{
+        display:flex;
+    }
+    .lx-info spon:nth-child(1){
+        font-size:16px;
+        color:#989393;
+        line-height:16px;
+        font-weight:600;
+    }
+    .bh-box .bm-box span{
+        margin-right:8px;
+        font-size:16px;
+        width:16px;
+
+    }
+    .bh-box .bm-box h4{
+        flex-grow:1;
+    }
+    .bm-box h6{
+        color: rgba(0, 0, 0, 0.45);
+        width: 70%;
+    }
+    .operate-box{
+        line-height:24px;
+        text-align:center;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: normal;
+        color: #1890ff;
+        padding:8px 0 8px 0;
+        box-sizing:border-box;
+    }
+    .operate-box a{
+        font-size: 12px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #1890ff;
+    }
+    .operate-box a.bj{
+        border-right:1px solid rgba(0, 0, 0, 0.15);
+    }
+
+    .none-info{
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+    .none-info img{
+        margin:0 auto;
+    }
+    .non-message{
+        font-size: 24px;
+          font-weight: normal;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 1.33;
+          letter-spacing: normal;
+          text-align: center;
+          color: rgba(0, 0, 0, 0.25);
+          margin-top:5px;
+    }
+    .cursor{
+        cursor:pointer;
+    }
+
+    .o_kanban_ghost {
+        height: 0;
+        min-height: 0!important;
+        visibility: hidden;
+        margin-top: 0;
+        margin-bottom: 0;
+        -ms-flex: 1 1 300px;
+        flex: 1 1 300px;
+        background-color: #fff;
+        box-shadow: 0 0 1px 1px #666;
+        padding: 8px;
+    }
+
+
+    /*
+导航下标注
+ */
+.bottom-menu{
+    width:100%;
+    height:64px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2);
+    padding:0 24px 0 24px;
+    display:flex;
+    flex-wrap:nowrap;
+    align-items: center;
+    justify-content:space-between;
+}
+.bottom-menu h4{
+    line-height:24px;
+    color:#fff;
+    border-left:2px solid #1890ff;
+    box-sizing:border-box;
+    color: rgba(0, 0, 0, 0.65);
+    white-space: nowrap;
+}
+  /*顶部搜索 部分*/
+.bottom-menu .right-box{
+    height:100%;
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap:nowrap;
+
+}
+.bottom-menu  .search-box {
+      width: 208px;
+      height: 32px;
+      border-radius: 4px;
+      border: solid 1px rgba(0, 0, 0, 0.15);
+}
+.bottom-menu  .search-box input{
+    border:0;
+    outline:none;
+    font-size:10px;
+    color: rgba(0, 0, 0, 0.25);
+}
+.bottom-menu  .search-box{
+    display:flex;
+    justify-content:space-around;
+    align-items: center;
+    flex-wrap:nowrap;
+    box-sizing:border-box;
+    margin-left:56px;
+}
+ .btn-ss,.add-btn{
+    width: 96px;
+    height: 32px;
+    border-radius: 4px;
+    border: solid 1px #1890ff;
+    color:#fff;
+    margin:0 2% 0 2%;
+    color: #1890ff;
+    text-align:center;
+    line-height:32px;
+    margin-left:16px;
+}
+ .add-btn{
+    background:#1890ff;
+
+}
+.add-btn a{
+    font-size: 14px;
+    color:#fff;
+}
+.zhiwei{
+    white-space:nowrap;
+    line-height:32px !important;
+
+}
+.drop-boxa{
+    height: 32px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    background-color: var(--white);
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    line-height:32px;
+    padding:0 16px 0;
+    color: rgba(0, 0, 0, 0.65);
+    box-sizing:border-box;
+    padding-left:16px;
+    position:relative;
+    margin-left:16px;
+
+}
+.bottom-menu{
+    background-color: #ffffff;
+}
+.bottom-menu .drop-select{
+    position:absolute;
+    top:103%;
+    left:0;
+    right:0;
+    display:block;
+    z-index:9999999999;
+    padding:8px 0px 8px;
+    height: 272px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-sizing:border-box;
+    overflow:hidden;
+    overflow:auto;
+    display:none;
+
+}
+.bottom-menu .drop-select li{
+    width: 100%;
+    height: 32px;
+    padding:0 16px 0;
+    color: rgba(0, 0, 0, 0.65);
+    text-align:left;
+
+}
+.bottom-menu .drop-select li:hover{
+     background-color: rgba(0, 0, 0, 0.04);
+}
+.bottom-menu .drop-select li:nth-child(1){
+    background-color: rgba(0, 0, 0, 0.04);
+
+}
+.drop-boxa .arrow-down{
+    position:absolute;
+    right:3px;
+}
+.bottom-menu .search-right-box{
+    padding-left:56px;
+    box-sizing:border-box;
+}
+
+ .bottom-menu div.col-md-7 .search-boxb{
+    display:none;
+ }
+/*
+ 导航下搜索栏
+ */
+@media screen and (max-width:1325px){
+    .bottom-menu div.col-md-7 .search-boxa{
+        display:none;
+    }
+    .bottom-menu div.col-md-7 .search-boxb{
+        display:block;
+        display:flex;
+        justify-content:flex-end;
+        align-items: center;
+        position:relative;
+    }
+    .search-boxb .btn-menu{
+        font-size:26px;
+        color:#1890ff;
+
+    }
+    .search-boxb .res-search-wrap{
+        box-sizing:border-box;
+        position:absolute;
+        top:100%;
+        right:-6px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        z-index:99999999;
+        padding:8px !important;
+        border-radius:4px;
+    }
+    .bottom-menu .res-search-wrap h4{
+        line-height:24px;
+    }
+}
+@media screen and (max-width:992px){
+    .nav-header .right-menu div.drap-box {
+        display:none;
+    }
+    .nav-header .right-menunew{
+        display:block;
+    }
+    .bottom-menu .search-box{
+        margin-left:0;
+        float:left;
+    }
+    .bottom-menu .btn-sousuo{
+        margin-left:0;
+        float:right;
+    }
+
+}
+
+</style>
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor itemss-active"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">电商商品管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类管理</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品管理</a></li>
+                    <li class="cursor"><a href="" style="min-width:105px;">电商商品管理</a></li>
+                    <li class="cursor"><a href="">属性管理</a></li>
+                    <li class="cursor"><a href=""  >分类管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!--导航结束-->
+
+
+    <!-- 导航下面内容 -->
+     <div class="container-fluid main-box" style="padding:0;margin-top:64px;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu row" style="padding-right: 0;margin-left:0;">
+            <!-- 列数显示 -->
+            <h4 class="col-md-2 col-sm-2 col-xs-2" style="padding-left:14px;">电商商品管理</h4>
+
+            <div class="col-md-7  col-sm-7 col-xs-7 col-md-offset-3" >
+                <div class="row search-boxa">
+                    <div class="col-md-3">
+                        <h4  class="col-md-3 zhiwei" style="border-left:0;">分类：</h4>
+                        <div class="drop-boxa col-md-8 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <h4  class="col-md-3 zhiwei" style="border-left:0;">状态：</h4>
+                        <div class="drop-boxa col-md-8 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="col-md-6 search-box">
+                            <span class=" glyphicon glyphicon-search"></span>
+                            <input type="text" name="" placeholder="搜索商品名称、upc编号" style="border:0;outline:none;" class="ss-upc sl">
+                        </div>
+                        <div class="col-md-3">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="add-btn cursor">
+                                <a href="addStaff.html">添加商品</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 响应式导航下搜索 -->
+                <div class="row search-boxb">
+                    <div class="add-btn cursor">
+                        <a href="addStaff.html">添加员工</a>
+                    </div>
+                    <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                    <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+                       <!-- 部门 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">分类：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select">
+                                    <li>全部</li>
+                                    <li>财务</li>
+                                    <li>IT</li>
+                                    <li>后台</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 状态 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select" style="min-height:90px;">
+                                    <li>全部</li>
+                                    <li>在职</li>
+                                    <li>离职</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                            <div class="search-box ">
+                                <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                                <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                            </div>
+                            <div class="btn-sousuo">
+                                <div class="btn-ss cursor">搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表 -->
+         <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;padding:0 24px;">
+
+           <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+
+           <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+
+           <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+
+         <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+           <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+           <div class="col-sm-4 col-md-3 col-xs-12 itemss" style="height:160px;">
+                <a href="staffDetail.html">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="editStaff.html" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+        </div>
+         <nav clas="footer" aria-label="...">
+            <ul class="pagination" style="float:right;padding-right:28px;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+
+            </ul>
+        </nav>
+
+
+       <!-- 没有搜索到任何信息时出现 -->
+        <div class="none-info" style="display:none;">
+            <img src="../../dist/images/errorview-empty.png" alt="" >
+            <h5 class="non-message">没有找到相关员工~</h5>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../dist/js/login.js"></script>
+
+<script type="text/javascript" charset="utf-8" async defer>
+
+   $('.drop-boxa').click(function(){
+        $(this).find('.drop-select').toggle();
+        // css(
+        // 'display', 'block').parent('').siblings('').children('ul').css('display','none');
+
+    })
+
+
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+
+    })
+
+</script>
+
+
+
+
+
+

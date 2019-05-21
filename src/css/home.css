@@ -1,0 +1,17 @@
+/*
+* @Author: Marte
+* @Date:   2018-06-27 09:40:54
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-06-27 09:48:07
+*/
+@font-face {
+  font-family: 'Glyphicons Halflings';
+
+  src: url('../myicons/iconfont/myicons.eot');
+  src: url('../myicons/iconfont/myicons.eot?#iefix') format('embedded-opentype'),
+        url('../myicons/iconfont/myicons.woff2') format('woff2'),
+        url('../myicons/iconfont/myicons.woff') format('woff'),
+        url('../myicons/iconfont/myicons.ttf') format('truetype'),
+
+        url('../myicons/myicons.svg#myicons') format('svg');
+}

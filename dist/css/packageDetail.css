@@ -1,0 +1,2 @@
+.xz input:checked+label,input[type=radio]+label::before{border:1px solid rgba(0,0,0,.15)}input[type=radio]:checked+label::before{background-color:rgba(0,0,0,.15);border:1px solid rgba(0,0,0,.15)}.xz input:checked+label{background:url(../images/checkhui.jpg) 100% 100% no-repeat}.select-info .beizhu{background:rgba(0,0,0,.04)}input[disabled]{background-color:transparent}.time-box{background:rgba(0,0,0,.04)}.jeinput{padding:5px}
+/*# sourceMappingURL=packageDetail.css.map */

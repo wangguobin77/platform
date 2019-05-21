@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.css" rel="stylesheet">
+    <link href="../../dist/css/welcome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/common.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/responseHeader.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/commodityManagement - 副本.css">
+    <script type="text/javascript" src="../../dist/myfonts/iconfont.js"></script>
+
+</head>
+<style type="text/css">
+    /*
+        清除浮动
+     */
+    .clearfix() {
+      &:before,
+      &:after {
+        content: " ";
+        display: table;
+      }
+      &:after {
+        clear: both;
+      }
+    }
+    .container {
+      .clearfix();
+    }
+
+</style>
+<body style="overflow:hidden;overflow-y:auto;max-width:1920px;position:absolute;top:0;left:0;right:0;bottom:0;">
+
+<nav class="navbar navbar-default nav-header">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand font_family icon-menu_home cursor" href="#" style="font-size:24px;line-height:34px;">基础设置</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" >
+        <ul class="nav navbar-nav">
+            <li class="">
+                <a href="#" style="min-width:96px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">员工管理 </a>
+            </li>
+
+
+            <li class="">
+                <a href="#" style="min-width:96px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">电商商品管理 </a>
+            </li>
+
+            <li class="">
+                <a href="#" style="min-width:96px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">属性管理
+                 </a>
+            </li>
+
+            <li class="">
+                <a href="#" style="min-width:96px;" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">分类管理 </a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown dropdown-li">
+                <a href="javascript:;"  data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-li-a">
+                    <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                    <span class="factory-xx sl">深圳隆昌模型制…</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown dropdown-li" >
+                <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                    <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                    <span class="factory-xx sl">周大侠</span>
+                    <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">修改手机号</a></li>
+                    <li><a href="#">修改密码</a></li>
+                    <li><a href="#">退出登录</a></li>
+
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+    <!--导航开始-->
+<!--     <nav class="nav-header">
+        <div class="left-logo">
+            <span class="icon-menu font_family icon-menu_home cursor"></span>
+            <h3 class="H3LSWhite">基础设置</h3>
+        </div>
+        <ul class="m-menu">
+            <li class="items cursor items-active">员工管理</li>
+            <li class="items cursor">职位管理</li>
+            <li class="items cursor">角色管理</li>
+            <li class="items cursor">组织机构</li>
+
+        </ul>
+
+        <div class="right-menu ">
+            <div class="drap-box cursor">
+                <div class="drap-box cursor">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造模型集团</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+
+                </div>
+                <div class="drap-box cursor userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+
+                </div>
+            </div>
+            <span class="glyphicon glyphicon-align-justify"></span>
+            <div class="res-drop-menu" style="display:none;">
+                <ul>
+                    <li>
+                        <a href="">username</a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+
+    </nav> -->
+     <!-- 头部导航结束 -->
+
+
+
+
+    <!-- 响应式导航的显示 -->
+
+
+    <!-- 导航下面内容 -->
+     <div class="container-fluid main-box" style="top:64px;">
+            <!-- 导航下标注 -->
+        <div class="bottom-menu row">
+            <!-- 列数显示 -->
+            <h4 class="col-md-2 col-sm-2 col-xs-2" style="padding-left:14px;">电商商品管理</h4>
+            <div class="col-md-7  col-sm-7 col-xs-7 col-md-offset-3">
+                <div class="row search-boxa">
+                    <div class="col-md-2">
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">分类：</h4>
+                        <div class="drop-boxa col-md-7 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                        <div class="drop-boxa col-md-7 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="">
+                        <div class="col-md-6 search-box">
+                            <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                            <input type="text" name="" placeholder="搜索商品名称、upc编号" style="border:0;outline:none;" class="sl col-md-10">
+                        </div>
+                        <div class="col-md-3">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="add-btn cursor">
+                                <a href="addStaff.html">添加商品</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 响应式导航 -->
+                <div class="row search-boxb">
+                    <div class="add-btn cursor">
+                        <a href="addStaff.html">添加员工</a>
+                    </div>
+                    <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                    <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">职位：</h4>
+                            <div class="drop-boxa col-md-7 cursor">
+
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select">
+                                    <li><input type="radio" name="" style="opacity:0;">全部</li>
+                                    <li>财务</li>
+                                    <li>IT</li>
+                                    <li>后台</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 部门 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">部门：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select">
+                                    <li>全部</li>
+                                    <li>财务</li>
+                                    <li>IT</li>
+                                    <li>后台</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 状态 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select" style="min-height:90px;">
+                                    <li>全部</li>
+                                    <li>在职</li>
+                                    <li>离职</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                            <div class="search-box ">
+                                <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                                <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                            </div>
+                            <div class="btn-sousuo">
+                                <div class="btn-ss cursor">搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表 -->
+        <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;margin-top:26px;">
+
+            <div class="col-sm-4 col-md-3 col-xs-12 items" >
+                <a href="javascript:;">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <h4 class="H3LSWhite">0001</h4>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">角色设置</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-xs-12 items" >
+                <a href="javascript:;">
+                    <div class="row">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <span class="tx">XS</span>
+                            <span class="H3LSWhite">已下架</span>
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">刘先生</h4>
+                                <span style="color:#fff;line-height:16px;">在职</span>
+                            </div>
+                            <span class="row">财务总监</span>
+                            <div class="row lx-info">
+                                <span class="glyphicon glyphicon-earphone"></span>
+                                <span>13265233254</span>
+
+                            </div>
+
+                            <div class="row bm-box">
+                                <span class="glyphicon glyphicon-object-align-left"></span>
+                                <h6 class="sl">上海感悟/财务部   创智天地1号店/…</h6>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box">
+                        <a href="" class="col-md-6 col-xs-6 bj">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 items" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 items" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 items" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 items" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 items" ></div>
+        </div>
+         <nav clas="footer" aria-label="...">
+            <ul class="pagination" style="float:right;padding-right:28px;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+
+            </ul>
+        </nav>
+
+
+       <!-- 没有搜索到任何信息时出现 -->
+        <div class="none-info" style="display:none;">
+            <img src="../../dist/images/errorview-empty.png" alt="" >
+            <h5 class="non-message">没有找到相关员工~</h5>
+        </div>
+    </div>
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../dist/js/login.js"></script>
+
+<script type="text/javascript" charset="utf-8" async defer>
+
+   $('.drop-boxa').click(function(){
+        $(this).find('.drop-select').toggle();
+        // css(
+        // 'display', 'block').parent('').siblings('').children('ul').css('display','none');
+
+    })
+
+    // $('.btn-menu').click(function(){
+    //     event.stopPropagation();
+    //     $('.btn-menu-box').toggle();
+
+    // });
+    // $(document).click(function(e){
+    //     var _con = $('.btn-menu-box');   // 设置目标区域
+    //     if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+    //         $('.btn-menu-box').css('display','none');
+    //     }
+
+    // })
+
+</script>
+
+
+
+
+
+

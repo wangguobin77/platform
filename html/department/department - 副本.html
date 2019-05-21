@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" href="../../dist/css/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/kendo.material.mobile.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/roleManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/leftmenu.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href='../../dist/css/department - 副本.css'>
+    <!-- KENDO UI引用资源 -->
+    <script src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+    <script src="../../dist/js/public/kendo.all.min.js"></script>
+
+
+    <style type="text/css" media="screen">
+        body{
+            background:#fff;
+        }
+
+    </style>
+
+</head>
+
+<body class="drawer drawer--left o_web_client drawer-close" style="overflow:hidden;">
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor "><a href="javascript:;" style="color:#fff;">员工管理</a></li>
+                    <li class="items cursor"><a href="javascript:;" style="color:#fff;">职位管理</a></li>
+                    <li class="items cursor items-active"><a href="javascript:;" style="color:#fff;">角色管理</a></li>
+                    <li class="items cursor" style="min-width:136px;"><a href="javascript:;" style="color:#fff;">组织/部门机构</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">员工管理</a></li>
+                    <li class="cursor"><a href="">职位管理</a></li>
+                    <li class="cursor"><a href="">角色管理</a></li>
+                    <li class="cursor"><a href="">组织/部门机构</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+
+    <!-- 组织机构树 -->
+    <div class="container-fluid" style="display:flex;flex-grow:1;margin-top:64px;flex-direction: column;padding:0;">
+        <div class="bottom-menu" style="margin-top:0;">
+            <h4>组织/部门管理</h4>
+        </div>
+
+        <div id="example" style="flex-grow:1;padding:0 24px;">
+            <div id="treelist"></div>
+
+            <script>
+                $(document).ready(function () {
+                    var dataSource = new kendo.data.TreeListDataSource({
+                        data: [
+                          { id: 1, 姓名: "Daryl Sweeney", 职位: "CEO", 联系方式: "(555) 924-9726", parentId: null },
+                          { id: 2, 姓名: "Guy Wooten", 职位: "Chief Technical Officer", 联系方式: "(438) 738-4935", parentId: 1 },
+                          { id: 32, 姓名: "Buffy Weber", 职位: "VP, Engineering", 联系方式: "(699) 838-6121", parentId: 2 },
+                          { id: 11, 姓名: "Hyacinth Hood", 职位: "Team Lead", 联系方式: "(889) 345-2438", parentId: 32 },
+                          { id: 60, 姓名: "Akeem Carr", 职位: "Junior Software Developer", 联系方式: "(738) 136-2814", parentId: 11 },
+                          { id: 78, 姓名: "Rinah Simon", 职位: "Software Developer", 联系方式: "(285) 912-5271", parentId: 11 },
+                          { id: 42, 姓名: "Gage Daniels", 职位: "Software Architect", 联系方式: "(107) 290-6260", parentId: 32 },
+                          { id: 43, 姓名: "Constance Vazquez", 职位: "Director, Engineering", 联系方式: "(800) 301-1978", parentId: 32 },
+                          { id: 46, 姓名: "Darrel Solis", 职位: "Team Lead", 联系方式: "(327) 977-0216", parentId: 43 },
+                          { id: 47, 姓名: "Brian Yang", 职位: "Senior Software Developer", 联系方式: "(565) 146-5435", parentId: 46 },
+                          { id: 50, 姓名: "Lillian Bradshaw", 职位: "Software Developer", 联系方式: "(323) 509-3479", parentId: 46 },
+                          { id: 51, 姓名: "Christian Palmer", 职位: "Technical Lead", 联系方式: "(490) 421-8718", parentId: 46 },
+                          { id: 55, 姓名: "Summer Mosley", 职位: "QA Engineer", 联系方式: "(784) 962-2301", parentId: 46 },
+                          { id: 56, 姓名: "Barry Ayers", 职位: "Software Developer", 联系方式: "(452) 373-9227", parentId: 46 },
+                          { id: 59, 姓名: "Keiko Espinoza", 职位: "Junior QA Engineer", 联系方式: "(226) 600-5305", parentId: 46 },
+                          { id: 61, 姓名: "Candace Pickett", 职位: "Support Officer", 联系方式: "(120) 117-7475", parentId: 46 },
+                          { id: 63, 姓名: "Mia Caldwell", 职位: "Team Lead", 联系方式: "(848) 636-6470", parentId: 43 },
+                          { id: 65, 姓名: "Thomas Terry", 职位: "Senior Enterprise Support Officer", 联系方式: "(764) 831-4248", parentId: 63 },
+                          { id: 67, 姓名: "Ruth Downs", 职位: "Senior Software Developer", 联系方式: "(138) 991-1440", parentId: 63 },
+                          { id: 70, 姓名: "Yasir Wilder", 职位: "Senior QA Enginner", 联系方式: "(759) 701-8665", parentId: 63 },
+                          { id: 71, 姓名: "Flavia Short", 职位: "Support Officer", 联系方式: "(370) 133-9238", parentId: 63 },
+                          { id: 74, 姓名: "Aaron Roach", 职位: "Junior Software Developer", 联系方式: "(958) 717-9230", parentId: 63 },
+                          { id: 75, 姓名: "Eric Russell", 职位: "Software Developer", 联系方式: "(516) 575-8505", parentId: 63 },
+                          { id: 76, 姓名: "Cheyenne Olson", 职位: "Software Developer", 联系方式: "(241) 645-0257", parentId: 63 },
+                          { id: 77, 姓名: "Shaine Avila", 职位: "UI Designer", 联系方式: "(844) 435-1360", parentId: 63 },
+                          { id: 81, 姓名: "Chantale Long", 职位: "Senior QA Enginner", 联系方式: "(252) 419-6891", parentId: 63 },
+                          { id: 83, 姓名: "Dane Cruz", 职位: "Junior Software Developer", 联系方式: "(946) 701-6165", parentId: 63 },
+                          { id: 84, 姓名: "Regan Patterson", 职位: "Technical Writer", 联系方式: "(265) 946-1765", parentId: 63 },
+                          { id: 85, 姓名: "Drew Mckay", 职位: "Senior Software Developer", 联系方式: "(327) 293-0162", parentId: 63 },
+                          { id: 88, 姓名: "Bevis Miller", 职位: "Senior Software Developer", 联系方式: "(525) 557-0169", parentId: 63 },
+                          { id: 89, 姓名: "Bruce Mccarty", 职位: "Support Officer", 联系方式: "(936) 777-8730", parentId: 63 },
+                          { id: 90, 姓名: "Ocean Blair", 职位: "Team Lead", 联系方式: "(343) 586-6614", parentId: 43 },
+                          { id: 91, 姓名: "Guinevere Osborn", 职位: "Software Developer", 联系方式: "(424) 741-0006", parentId: 90 },
+                          { id: 92, 姓名: "Olga Strong", 职位: "Graphic Designer", 联系方式: "(949) 417-1168", parentId: 90 },
+                          { id: 93, 姓名: "Robert Orr", 职位: "Support Officer", 联系方式: "(977) 341-3721", parentId: 90 },
+                          { id: 95, 姓名: "Odette Sears", 职位: "Senior Software Developer", 联系方式: "(264) 818-6576", parentId: 90 },
+                          { id: 45, 姓名: "Zelda Medina", 职位: "QA Architect", 联系方式: "(563) 359-6023", parentId: 32 },
+                          { id: 3, 姓名: "Priscilla Frank", 职位: "Chief Product Officer", 联系方式: "(217) 280-5300", parentId: 1 },
+                          { id: 4, 姓名: "Ursula Holmes", 职位: "EVP, Product Strategy", 联系方式: "(370) 983-8796", parentId: 3 },
+                          { id: 24, 姓名: "Melvin Carrillo", 职位: "Director, Developer Relations", 联系方式: "(344) 496-9555", parentId: 3 },
+                          { id: 29, 姓名: "Martha Chavez", 职位: "Developer Advocate", 联系方式: "(140) 772-7509", parentId: 24 },
+                          { id: 30, 姓名: "Oren Fox", 职位: "Developer Advocate", 联系方式: "(714) 284-2408", parentId: 24 },
+                          { id: 41, 姓名: "Amos Barr", 职位: "Developer Advocate", 联系方式: "(996) 587-8405", parentId: 24 }
+                        ],
+
+                        schema: {
+                            model: {
+                                id: "id",
+                                expanded: true
+                            }
+                        }
+                    });
+
+                    $("#treelist").kendoTreeList({
+                        dataSource: dataSource,
+                        height: 550,
+                        columns: [
+
+
+                            {
+                                template:
+                                "<div class='customer-name'>#: 职位 #</div>",
+                                field: "职位",
+                                title: "组织/部门名称",
+                                width:798,
+                            },
+                            {
+                                field: "姓名" ,
+                                title:"组织/部门类型"
+                            },
+                            {
+                                field: "描述",
+                                title:"地址"
+                            },
+                            {
+                                template:
+                                    "<div class='caozuo-wrap'>"+
+                                        "<span class='btn-cz bianji cursor font_family icon-operation_edit'></span>" +
+                                        "<span class='btn-cz shanchu cursor font_family icon-operation_delate'></span>"+
+                                        "<a href='addOrg.html' style='font-size:14px;'>"+"添加机构"+"</a>"+
+
+                                        "<a href='addDeparent.html' style='font-size:14px;'>"+"添加部门"+"</a>"+
+                                        // "<span class='btn-cz tianjia cursor font_family icon-operation_delate' onclick='add_org()'></span>"+
+
+                                        "<div class='tj-drop-box'>"+
+                                            "<div class='tj-drop'>"+
+                                                "<ul class=''>"+
+                                                    "<li class='cursor'>"+"添加组织结构"+"</li>"+
+                                                    "<li class='cursor'>"+"添加部门"+"</li>"
+                                                +"</ul>"
+                                            +"</div>"
+                                        +"</div>"
+                                    +"</div>",
+
+                                field: "操作",
+                                title: "操作"
+
+                            },
+                        ]
+                    });
+                });
+            </script>
+        </div>
+    </div>
+    <!-- 删除提示框 -->
+    <div class="del-box">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+                <img src="../../dist/images/warning-large.png" alt="">
+                <h6>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+        // 添加组织
+        function add_org(){
+            alert(111);
+            $(this).next('.tj-drop-box').show().parent().parent().parent().parent().siblings('tr').find('div.tj-drop-box').hide();
+            $(this).next('.tj-drop-box').css('display','block');
+
+        }
+
+    </script>
+</body>
+</html>

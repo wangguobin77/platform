@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+    <!-- 日期引用 start-->
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/jeDate-test.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/jedate.css">
+    <!-- 日期引用 end -->
+
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/roleManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/salesList.css">
+</head>
+
+<body>
+    <!-- 导航start -->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">报表中心</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor items-active" style="min-width:128px;"><a href="javascript:;">商品销售报表</a></li>
+                    <li class="items cursor"><a href="javascript:;">订单流水</a></li>
+                    <li class="items cursor"><a href="javascript:;">退款流水</a></li>
+                    <li class="items cursor"><a href="javascript:;">提成报表</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品销售报表</a></li>
+                    <li class="cursor"><a href="">订单流水</a></li>
+                    <li class="cursor"><a href="">退款流水</a></li>
+                    <li class="cursor"><a href="">提成报表</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+    <div class="container-fluid" style="display:flex;flex-grow:1;flex-direction: column;padding:0;background:#F5F5F5;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu" style="margin-top:0;">
+            <div class="col-lg-12 col-md-12" style="padding:0;">
+                <h4 class="col-lg-1 col-md-1">商品销售报表</h4>
+                <div class="search-boxa col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1 right-box" style="padding:0;">
+                    <div class="boxa-left col-md-11">
+                        <!-- 日期切换按钮 -->
+                        <div class="tab-qh">
+                            <span class="cursor day">按天</span>
+                            <span class="cursor mouth data-box-active">按月</span>
+                        </div>
+                        <!-- 选择月的盒子 -->
+                        <div class="date-box mouth-box">
+                            <input type="text" class="jeinput cursor" id="test02" placeholder=" 请选择月份">
+                            <img class='pointer' src="../../../dist/images/calendar.svg" alt="">
+                        </div>
+
+                        <!-- 选择天的盒子 -->
+                        <div class="date-box day-box" >
+                            <input type="text" class="jeinput" id="test11" placeholder="开始日期     ~     结束日期">
+                            <img class='pointer' src="../../../dist/images/calendar.svg" alt="">
+
+                        </div>
+
+                        <!-- 机构名称 -->
+                        <div class="jgmc  cursor">
+                            <h6>机构名称:</h6>
+                            <select class="cursor sl">
+                                <option value="">深圳隆昌模型制造有限公司</option>
+                                <option value="">深圳隆昌模型制造有限公司</option>
+                                <option value="">深圳隆昌模型制造有限公司</option>s
+                            </select>
+                        </div>
+                        <!-- 分类 -->
+                        <div class="fl">
+                            <h6>分类:</h6>
+                            <select class="cursor sl">
+                                <option value="">总部</option>
+                                <option value="">分部</option>
+                                <option value="">分部1</option>
+                            </select>
+                        </div>
+                        <!-- 搜素框 -->
+                        <div class="search-k">
+                            <div class="search-box">
+                                <span class=" glyphicon glyphicon-search"></span>
+                                <input type="text" name="" placeholder="搜索商品名称、upc编号" style="border:0;outline:none;" class="ss-upc sl">
+                            </div>
+                            <div class="">
+                                <div class="btn-ss cursor">搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 导出报表 -->
+                    <div class=" zjck">
+                        <div class="add-btn cursor">
+                            <a href="javascript:;" style="color:#fff;">导出报表</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 响应式导航下搜索 -->
+            <div class="row search-boxb" style="display:none;">
+                <div class="add-btn cursor xszt">
+                    <a href="javascript:;">销售自提</a>
+
+                </div>
+                 <div class="add-btn cursor zjck">
+                    <a href="directOutbound.html">直接出库</a>
+                </div>
+                <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+                   <!-- 部门 -->
+                    <div class="row" >
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">类型：</h4>
+                        <div class="drop-boxa col-md-9 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 状态 -->
+                    <div class="row" >
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                        <div class="drop-boxa col-md-9 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select" style="min-height:90px;">
+                                <li>已出库</li>
+                                <li>待审核</li>
+                                <li>已拒绝</li>
+                                <li>草稿</li>
+                                <li>已作废</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                        <div class="search-box ">
+                            <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                            <!-- <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10"> -->
+                            <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                        </div>
+                        <div class="btn-sousuo">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表  -->
+        <div class="table-responsive" style="padding:0 24px;">
+            <table class="table">
+                 <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th  width="160px" sl">upc</th>
+                        <th  width="288px" sl">商品名称</th>
+                        <th  width="144px" sl">建议零售价</th>
+                        <th  width="144px" sl">平均销售单价</th>
+                        <th  width="144px" sl">折扣 </th>
+                        <th  width="144px" sl">折扣率 </th>
+                        <th  width="144px" sl">销售数量</th>
+                        <th  width="144px" sl">销售额</th>
+                        <th  width="144px" sl">单位成本</th>
+                        <th  width="144px" sl">成本</th>
+                        <th  width="144px" sl">销售毛利</th>
+                        <th  width="144px" sl">销售毛利率</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                    <tr>
+                        <td class="sl">8459586598102</td>
+                        <td class="sl">SENSERACER 红色 10000mAh 基本款</td>
+                        <td class="sl">￥4,000.00 </td>
+                        <td class="sl">￥3,600.00</td>
+                        <td class="sl">￥400.00 </td>
+                        <td class="sl">10%</td>
+                        <td class="sl">150 </td>
+                        <td class="sl">￥540,000.00 </td>
+                        <td class="sl ">￥2,000.00</td>
+                        <td class="sl">￥300,000.00 </td>
+                        <td class="sl">￥161,538.46 </td>
+                        <td class="sl ">35.00%</td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+
+        <!-- 搜索时没有此信息时显示 -->
+        <div class="none-info" style="display:none;">
+            <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;padding:0 24px;">
+                <div style="margin:0 auto;">
+                    <img src="../../../dist/images/errorview-empty.png" alt="" >
+                    <h5 class="non-message">没有找到相关信息~</h5>
+                </div>
+            </div>
+        </div>
+        <!-- 无此消息提示 end -->
+        <nav clas="footer" aria-label="..." style="padding-right:24px;" >
+            <ul class="pagination" style="float:right;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+            </ul>
+        </nav>
+    </div>
+<script src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="../../../dist/js/public/jedate.js"></script>
+<script type="text/javascript" src="../../../dist/js/salesList.js"></script>
+<script type="text/javascript">
+    // 下拉框
+    $('.drop-boxa').click(function(){
+        $(this).find('.drop-select').toggle();
+        // css(
+        // 'display', 'block').parent('').siblings('').children('ul').css('display','none');
+    })
+
+</script>
+</body>
+</html>

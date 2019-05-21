@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/styles.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/jquery.treegrid.css">
+
+    <!-- <link rel="stylesheet" type="text/css" href="../../dist/css/roleManagement.css"> -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/property.css">
+
+    <script src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body class="drawer drawer--left o_web_client drawer-close" style="overflow-y:hidden;">
+
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;">电商商品管理</a></li>
+                    <li class="items cursor items-active"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类机构</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品管理</a></li>
+                    <li class="cursor" style="min-width:128px;"><a href="">电商商品管理</a></li>
+                    <li class="cursor"><a href="">属性管理</a></li>
+                    <li class="cursor"><a href="">分类机构</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+
+    <!-- 组织机构树 -->
+    <div class="container-fluid" style="display:flex;flex-grow:1;flex-direction: column;padding:0;overflow-y:scroll;">
+        <div class="bottom-menu" style="margin-top:0;">
+            <h4>属性管理</h4>
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    添加属性
+                </div>
+            </div>
+        </div>
+
+         <div id="example" style="flex-grow:1;padding-left:24px;padding-right:24px;" >
+            <div class="row">
+                <!-- 左侧菜单 sm>=768px-->
+                <div class="col-md-12  col-sm-12 col-xs-12 " style="border-right:0;padding:0;">
+                    <div class="row">
+                        <table class="tree1">
+                            <thead>
+                                <tr>
+                                    <th width="34%" class="sl">名称</th>
+                                    <th width="25%" class="sl">排序</th>
+                                    <th width="25%" class="sl">操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="treegrid-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            颜色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            白色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="treegrid-parent-1">
+                                    <td>
+                                         <div class="text-box sl" contenteditable="false">
+                                            红色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                  <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                  <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                  <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                  <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                  <tr class="treegrid-parent-1">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            黑色
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 电池容量 -->
+                                <tr class="treegrid-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                             <div class="text-box sl" contenteditable="false">
+                                                电池容量
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family glyphicon glyphicon-plus"></span>
+                                    </td>
+
+                                    <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+
+
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                       <div class="text-box sl" contenteditable="false">
+                                            10000mah
+                                        </div>
+
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+                                <tr class="treegrid-parent-2">
+                                    <td>
+                                        <div class="text-box sl" contenteditable="false">
+                                            20000mah
+                                        </div>
+                                    </td>
+                                    <td class="">
+                                        <span class="glyphicon glyphicon-arrow-up"></span>
+                                        <span class="xian"></span>
+                                        <span class="glyphicon glyphicon-arrow-down"></span>
+                                    </td>
+
+                                    <td class="opr-box crud-box">
+                                        <span class="font_family icon-operation_edit"></span>
+                                        <span class="xian"></span>
+                                        <span class="font_family icon-operation_delate"></span>
+                                        <span class="xian"></span>
+                                    </td>
+                                     <!-- 出现保存 取消按键 -->
+                                    <td class="opr-box save-cancel-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                                <!-- 添加一 二级分类 -->
+                                <tr class="tiamjia-wrap tr-active" style="display:none;">
+                                    <td class="tj-td">
+                                        <span class="font_family icon-arrow_right_solid"></span>
+                                        <div class="text-box sl"  contenteditable="true"></div>
+                                    </td>
+                                    <td>
+                                    </td>
+                                    <td class="opr-box">
+                                        <span class="baocun">保存</span>
+                                        <span class='xian'></span>
+                                        <span class="quxiao">取消</span>
+
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 删除提示框 -->
+    <div class="del-box">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+                <img src="../../dist/images/warning-large.png" alt="">
+                <h6>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="../../src/js/property.js"></script>
+    <script src="../../src/js/public/jquery.treegrid.js"></script>
+    <script type="text/javascript">
+         $(document).ready(function() {
+                $('.tree1').treegrid({
+                onChange: function() {
+                    // alert("Changed: "+$(this).attr("id"));
+                },
+                onCollapse: function() {
+                    // alert("Collapsed: "+$(this).attr("id"));
+                },
+                onExpand: function() {
+                    // alert("Expanded "+$(this).attr("id"));
+                }});
+                $('#node-1').on("change", function() {
+                    // alert("Event from " + $(this).attr("id"));
+                });
+          });
+        $('.bread-menu').click(function(){
+            event.stopPropagation();
+            $('.res-992-m-menubox').toggle();
+
+        });
+        $(document).click(function(e){
+            var _con = $('.res-992-m-menubox');   // 设置目标区域
+            if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+                $('.res-992-m-menubox').css('display','none');
+            }
+
+        })
+
+            $(".list_dad").on("click", function() {
+                $('.list_son').stop();
+                if ($(this).parent().parent().attr("id") == "open") {
+                    $(this).parent().parent().removeAttr("id").siblings(".list_son").hide();
+                } else {
+                    $(this).parent().parent().attr("id", "open").next().show().siblings(".list_son").hide();
+                }
+            });
+
+            // 点击互换顺序
+            $(function(){
+                $(".list_son .glyphicon-arrow-down").click(function() {
+                    if($(this).parent().parent().next())
+                        $(this).parent().parent().next().after($(this).parent().parent());
+                });
+            });
+
+            $(function(){
+                $(".list_son .glyphicon-arrow-up").click(function() {
+                    if($(this).parent().parent().next())
+                        $(this).parent().parent().next().after($(this).parent().parent());
+                });
+            });
+
+        </script>
+</body>
+</html>

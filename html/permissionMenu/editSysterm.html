@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addSysterm.css">
+
+    <link rel="stylesheet" href="../../dist/css/public/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.mobile.min.css" />
+
+</head>
+<body class="drawer drawer--left o_web_client drawer-close" style="overflow-y:scroll;">
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor "><a href="javascript:;">员工管理</a></li>
+                        <li class="items cursor"><a href="javascript:;">职位管理</a></li>
+                        <li class="items cursor"><a href="javascript:;">角色管理</a></li>
+                        <li class="items cursor " style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">组织/部门管理</a></li>
+                        <li class="items cursor items-active" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">权限菜单管理</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">员工管理</a></li>
+                    <li class="cursor"><a href="">职位管理</a></li>
+                    <li class="cursor"><a href="">角色管理</a></li>
+                    <li class="cursor"><a href="" style="min-width:105px;">组织/部门管理</a></li>
+                    <li class="cursor"><a href="" style="min-width:105px;">权限菜单管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!--导航结束-->
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>系统管理  /  添加子集菜单</h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    <a href="systerm.html" style="color:#fff;">返回列表</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+            <!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+            <div class="row content-wrap">
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">菜单名称：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入菜单名称" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">路由地址：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入路由地址" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+
+                <!-- 图标 icon -->
+                <div class="col-md-6 row-xx">
+                    <div class="row">
+                        <h4 class="col-md-4 T1RRTittle">图标icon:</h4>
+                        <div class="col-md-8 icon-des">
+                            图片大小不能超过1MB；分辨率不能超过800X800，用于列表显示
+                        </div>
+                    </div>
+                    <div class="row">
+                        <h4 class="col-md-4 T1RRTittle"></h4>
+                        <div class="col-md-8">
+                            <div class="bg-icon">
+                                <i>
+                                    <span class="close-icon"></span>
+                                    <img src="" align="top">
+                                </i>
+                                <input type="file" name="picur2" accept="image/png, image/jpg" onchange="imgUpload_sm(this)" data-width="800px" data-height="800px"/>
+                                <img src="../../dist/images/addicon_big.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row content-wrap">
+                 <!-- 部门类型 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">部门类型：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+
+                        <div class="male">
+                            <input type="radio" id="male" name="bjjb" value="2"/>
+                            <label for="male" style="font-size:14px">菜单</label>
+                        </div>
+
+                         <div class="male" style="margin-left:38px;">
+                            <input type="radio" id="manu" name="bjjb" value="2"/>
+                            <label for="manu" style="font-size:14px">菜单</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">排序：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入序号，排序按从小到大排列" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+
+
+                <!-- 是否显示 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">是否显示：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="">
+                            <input type="radio" id="xs" name="status" checked value=""/>
+                            <label for="xs" style="font-size:14px">显示</label>
+                        </div>
+
+                        <div class="" style="margin-left:38px;">
+                            <input type="radio" id="bxs" name="status" value=""/>
+                            <label for="bxs" style="font-size:14px">不显示</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 状态 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">状态：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="">
+                            <input type="radio" id="qy" name="zt" checked value=""/>
+                            <label for="qy" style="font-size:14px">启用</label>
+                        </div>
+
+                        <div class="" style="margin-left:38px;">
+                            <input type="radio" id="jy" name="zt" value=""/>
+                            <label for="jy" style="font-size:14px">禁用</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 显示场景 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">显示场景：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="">
+                            <input type="radio" id="all" name="scene" checked value=""/>
+                            <label for="all" style="font-size:14px">都显示</label>
+                        </div>
+
+                        <div class="" style="margin-left:38px;">
+                            <input type="radio" id="pcs" name="scene" value=""/>
+                            <label for="pcs" style="font-size:14px">pc端显示</label>
+                        </div>
+                        <div class="" style="margin-left:38px;">
+                            <input type="radio" id="sjd" name="scene" value=""/>
+                            <label for="sjd" style="font-size:14px">手机端显示</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 允许添加子集 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">允许添加子集：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="">
+                            <input type="radio" id="pt" name="zj" checked value=""/>
+                            <label for="pt" style="font-size:14px">普通</label>
+                        </div>
+
+                        <div class="" style="margin-left:38px;">
+                            <input type="radio" id="ck" name="zj" value=""/>
+                            <label for="ck" style="font-size:14px">仓库</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row content-wrap">
+                <div class="col-md-2" style="text-align:right;">
+                    备注&nbsp;&nbsp;<span style="color: rgba(0, 0, 0, 0.25);">(选填)</span>：
+                </div>
+                <div name="textarea" class="textarea col-md-10" contenteditable="true"></div>
+
+            </div>
+
+            <div class="row content-wrap tj-box">
+                <button type="button" class="btn-tj">提交</button>
+            </div>
+        </div>
+
+
+    </div>
+
+
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script>
+    //上传商品配图
+    function imgUpload_sm(obj){
+        // console.log(obj);
+       var vvw=obj.getAttribute('data-width');
+       var vvh=obj.getAttribute('data-height');
+       var imgarr=[],
+            img_none=[];
+       var imgs=$('.imgs');
+        imgarr.push(imgs);
+
+
+       var fileData = obj.files[0];
+       console.log(size);
+       // var type=fileData.type;
+       // console.log(type);
+       var size = fileData.size / 1024;
+       if(size>1000){
+           alert("附件不能大1M");
+           return;
+      }
+       var reader = new FileReader();
+       console.log(reader);
+
+       reader.onload = function (e) {
+
+        var data = e.target.result;
+        console.log(data);
+
+        //加载图片获取图片真实宽度和高度
+        var image = new Image();
+        image.onload=function(){
+            var width = image.width+'px';
+            var height = image.height+'px';
+            if(width!=vvw && height!=vvh){
+                alert('规格错误，请上传'+vvw+"*"+vvh+'的图片');
+                $('input[name="picurl"]').val(null);
+                return false;
+            }
+                $(obj).prev("i").show();
+                $(obj).prev("i").html("<img src='"+data+"'>");
+
+                for(var i=0;i<imgarr.length;i++){
+                    if(imgarr[i].attr('src')!=undefined){
+                        img_none.push(imgarr[i]);
+                        console.log(img_none.length);
+
+                    }
+
+                }
+        };
+        image.src= data;
+    };
+
+    //读取文件的base64数据
+    reader.readAsDataURL(fileData);
+ }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+/*
+* @Author: Marte
+* @Date:   2018-07-05 16:52:50
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-07-23 16:27:36
+*/
+.nav-header {
+    border: 0;
+    line-height: 64px;
+    padding: 0 24px;
+    background-color: #1890ff;
+    height: 64px;
+    position: absolute;
+    width: 100%;
+    z-index:9999;
+}
+.content-wrap{
+    padding:0 24px 0;
+}
+.content-wrap .input-box{
+    line-height:37px;
+    color:rgba(0,0,0,0.5);
+    outline:none;
+}
+.text-box{
+    padding:0 24px 0;
+}
+@media (max-width: 768px){
+    .content-wrap h4 {
+        text-align: left;
+        padding-left: 0;
+    }
+    .text-box h4{
+        text-align:left;
+        margin-left:0;
+        padding-left: 0;
+    }
+}
+

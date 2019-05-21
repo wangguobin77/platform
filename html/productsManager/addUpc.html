@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.mobile.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/commodityManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffDetail.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/productsManager.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addUpc.css">
+
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    textarea:disabled{
+        background:#fff;
+    }
+</style>
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">SKU管理</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor itemss-active"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">电商商品管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">套装管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类管理</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品管理</a></li>
+                    <li class="cursor"><a href="" style="min-width:105px;">电商商品管理</a></li>
+                    <li class="cursor"><a href="">套装管理</a></li>
+                    <li class="cursor"><a href="">属性管理</a></li>
+                    <li class="cursor"><a href=""  >分类管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!--导航结束-->
+
+
+    <!-- 导航下面内容 -->
+    <div class="container-fluid main-box" style="padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>商品管理/添加商品</h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    <a href="stafflist.html" style="color:#fff;">返回列表</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- 下面的列表 -->
+        <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;margin-top:26px;padding-left:24px;padding-right:24px;">
+            <!-- 添加upc -->
+            <div class="upc-box">
+                <h4>请输入商品UPC：</h4>
+                <div class="text-box" >
+                    <input class="sl upc_value" type="text" name="" placeholder="请输入商品名称">
+
+                    <!-- 提示信息 -->
+                    <span class="ts">*请输入正确的参数！</span>
+                </div>
+
+                <!-- 开始添加 -->
+                <button type="button" class="start-add">开始添加</button>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- 下架提示信息框 -->
+    <div class="del-box">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+                <img src="../../dist/images/warning-large.png" alt="">
+                <h6>是否下架该商品？</h6>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+
+<script src="../../dist/js/dialog.js"></script>
+
+<script type="text/javascript" charset="utf-8" async defer>
+
+   $('.drop-boxa').click(function(){
+        $(this).find('.drop-select').toggle();
+        // css(
+        // 'display', 'block').parent('').siblings('').children('ul').css('display','none');
+
+    })
+
+
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+
+    })
+    // 添加upc
+    $('.start-add').click(function(){
+        var upc_value=$('.upc_value').val();
+        if(upc_value!=""){
+            window.location.href="addProduct.html";
+        }else{
+            $('.upc-box').find('span.ts').show();
+        }
+    })
+
+</script>
+
+
+
+
+
+

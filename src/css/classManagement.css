@@ -1,0 +1,224 @@
+/*
+* @Author: Marte
+* @Date:   2018-07-21 11:12:23
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-14 17:29:08
+*/
+
+body,html{
+    verflow:hidden;overflow-y:scroll;
+}
+.add-btn{
+    cursor:pointer;
+}
+table {
+  width:100%;
+  border-collapse:collapse;
+  border: 1px solid #ccc;
+}
+
+th, td {
+  text-align:left;
+  padding:5px 10px;
+  border-bottom:1px solid #e5e5e5;
+}
+
+dt {
+  color:#444;
+  font-weight:700;
+}
+
+th {
+  color:#444;
+}
+
+img {
+  max-width:100%;
+}
+
+table tr{
+    height:40px;
+    box-sizing: border-box;
+    border-bottom:1px solid rgba(0, 0, 0, 0.15);;
+
+}
+table thead{
+    background-color: rgba(0, 0, 0, 0.09);
+}
+table thead tr th{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.85);
+}
+table tr th:nth-child(1){
+    padding-left:24px;
+
+}
+table tr td:nth-child(1){
+    height:40px;
+    padding-left:24px;
+    display:flex;
+    align-items: center;
+}
+table tr td:nth-child(1){
+    max-width:636px;
+    box-sizing:border-box;
+}
+table tr td:nth-child(2){
+    max-width:281px;
+    box-sizing:border-box;
+}
+table tr td:nth-child(3){
+    max-width:374px;
+    box-sizing:border-box;
+}
+table tr td:nth-child(4){
+    max-width:281px;
+    box-sizing:border-box;
+}
+table tr td:nth-child(5){
+    max-width:290px;
+    box-sizing:border-box;
+}
+table tr td span{
+    margi-right:16px;
+
+}
+
+td, th {
+    text-align: left;
+    padding:0;
+    border-bottom:0;
+
+}
+
+/*点击编辑时候*/
+table tr td .text-box{
+    outline:none;
+    padding-left:10px;
+}
+table tr td .text-box-active{
+    width: 136px;
+    height: 28px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    line-height:28px;
+
+}
+.tr-active{
+        background-color: #e6f7ff;
+        border: solid 1px rgba(24, 144, 255, 0.45);
+    }
+
+    /*end*/
+tbody tr td.order{
+    display:flex;
+    align-items: center;
+
+}
+span.xian{
+    display: inline-block;
+    height:14px;
+    width:2px;
+    font-size:14px;
+    margin:0 8px;
+    background-color: rgba(0, 0, 0, 0.09);
+}
+tbody tr td.opr-box span{
+    font-size:24px;
+}
+
+/*
+添加一级发分类
+ */
+tr.tr-active div.text-box{
+    width: 136px;height: 28px;border-radius: 4px;background-color: #ffffff;border: solid 1px rgba(0, 0, 0, 0.15);outline:none;line-height:28px;padding-left:5px;
+
+}
+
+/*选择按钮*/
+
+input[type="radio"] + label::before {
+    content: "\a0"; /*不换行空格*/
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    width: 1em;
+    height: 1em;
+    margin-right: .4em;
+    border-radius: 50%;
+    border: 1px solid #1890ff;;
+    text-indent: .15em;
+    line-height: 1;
+    cursor: pointer;
+}
+
+input[type="radio"]:checked + label::before {
+    background-color: #1890ff;;
+    background-clip: content-box;
+    padding: .15em;
+    border-color:#1890ff;
+}
+input[type="radio"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+.male{
+    display:flex;
+    align-items:center;
+}
+/*end*/
+.choose-box label{
+    font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  color: rgba(0, 0, 0, 0.65);
+  cursor:pointer;
+  margin-right:16px;
+}
+.choose-box #male{
+    margin:0 16px;
+}
+td span{
+     cursor:pointer;
+}
+.tiamjia-wrap .opr-box span{
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1890ff;
+
+
+}
+
+/*点击编辑时  出现编辑类型的选中*/
+td.edit-type{
+    display:none;
+}
+
+.save-cancel-box{
+    display:none;
+}
+
+tbody tr td.save-cancel-box span {
+    font-size: 12px;
+    text-align: center;
+    color: #1890ff;
+}
+
+
+/*
+new  新增加
+ */
+.erji-wrap{
+    display:none !important;
+}

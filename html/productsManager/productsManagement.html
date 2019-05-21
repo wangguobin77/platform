@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/commodityManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffDetail.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/productsManager.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+    <script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+</head>
+<body style="overflow-y:hidden;display:flex;flex-direction:column;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    textarea:disabled{
+        background:#fff;
+    }
+</style>
+    <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor itemss-active"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor" style="min-width:128px;"><a href="javascript:;" style="min-width:128px;">电商商品管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类管理</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品管理</a></li>
+                    <li class="cursor"><a href="" style="min-width:105px;">电商商品管理</a></li>
+                    <li class="cursor"><a href="">属性管理</a></li>
+                    <li class="cursor"><a href=""  >分类管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+    </div>
+    <!--导航结束-->
+
+
+    <!-- 导航下面内容 -->
+    <div class="container-fluid main-box" style="flex-grow:1;padding:0;width:100%;overflow-y: scroll;overflow-x:hidden;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu row">
+            <!-- 列数显示 -->
+            <h4 class="col-md-2 col-sm-2 col-xs-2" style="padding-left:14px;">商品管理</h4>
+
+            <div class="col-md-9  col-sm-9 col-xs-9 col-md-offset-1" style="display:flex;justify-content:flex-end;">
+                <div class="row search-boxa">
+                    <!-- 所属机构 -->
+           <!--          <div class="ss-rq ssjg">
+                        <h4 >所属机构：</h4>
+                        <div class="drop-boxa cursor zt-dropbox">
+                            <span>全部</span>
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div> -->
+                    <!-- 分类 -->
+                    <div class="ss-rq flei ">
+                        <h4  >分类：</h4>
+                        <div class="drop-boxa cursor zt-dropbox">
+                            <span>全部</span>
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 状态 -->
+                    <div class="ss-rq zhuangt ">
+                        <h4  class="" >状态：</h4>
+                        <div class="drop-boxa cursor zt-dropbox">
+                            <span>全部</span>
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <script type="text/javascript">
+                        $(".ss-rq").each(function () {
+                             $(this).click(function () {
+                                event.stopPropagation();
+                                $(this).find('.drop-select').toggle();
+                                // if($(this).find('.drop-select').show()){
+                                //     $(this).siblings().find('.drop-select').hide();
+                                // }
+                            })
+                        })
+                        // 点击除了事件区外的区域 下拉框消失
+                        $(document).click(function(e){
+                            var con = $('.ss-rq');   //设置目标区域  允许点击范围
+                            if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+                                $('.drop-select').css('display','none');
+                            }
+                        })
+                    </script>
+                    <!-- 搜索框体 -->
+                    <div class="ssuo-rq">
+                        <div class="search-box">
+                            <span class=" glyphicon glyphicon-search"></span>
+                            <input type="text" name="" placeholder="搜索商品名称、upc编号" style="border:0;outline:none;" class="ss-upc sl">
+                        </div>
+                        <div class="">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                        <div class="">
+                            <div class="add-btn cursor">
+                                <a class="addpro" href="javascript:;">添加商品</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 响应式导航下搜索 -->
+                <div class="row search-boxb">
+                    <div class="add-btn cursor">
+                        <a class="addpro" href="javascript:;">添加商品</a>
+                    </div>
+                    <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                    <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+                       <!-- 部门 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">分类：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select">
+                                    <li>全部</li>
+                                    <li>财务</li>
+                                    <li>IT</li>
+                                    <li>后台</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 状态 -->
+                        <div class="row" >
+                            <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                            <div class="drop-boxa col-md-9 cursor">
+                                全部
+                                <span class="arrow-down font_family icon-arrow_open_line"></span>
+                                <ul class="drop-select" style="min-height:90px;">
+                                    <li>全部</li>
+                                    <li>在职</li>
+                                    <li>离职</li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                            <div class="search-box ">
+                                <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                                <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                            </div>
+                            <div class="btn-sousuo">
+                                <div class="btn-ss cursor">搜索</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row waring-ts">
+            <span class="font_family icon-warning_large"></span>
+            <span class="sl" style="width:85%;">
+                提示：ERP中全公司使用唯一的角色权限模板，请慎重维护角色及角色所拥有的权限！
+            </span>
+
+        </div>
+        <!-- 下面的列表 -->
+        <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;margin-top:26px;padding-left:24px;padding-right:24px;">
+
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" style="display:none;">已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-3 col-xs-3 bj hui" style="color: rgba(0, 0, 0, 0.25);">编辑信息</a>
+                        <a href="" class="col-md-3 col-xs-3 bj">图片管理</a>
+                        <a href="" class="col-md-3 col-xs-3 bj">价格设置</a>
+                        <a href="" class="col-md-3 col-xs-3">下架</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="productDetail.html">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" style="display:none;">已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="editProduct.html" class="col-md-6 col-xs-6 bj hui" style="color: rgba(0, 0, 0, 0.25);">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia" style="display:none;">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" >已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-6 col-xs-6 bj hui">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" style="display:none;">已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-6 col-xs-6 bj hui" style="color: rgba(0, 0, 0, 0.25);">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia" style="display:none;">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" >已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-6 col-xs-6 bj hui">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" style="display:none;">已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-6 col-xs-6 bj hui" style="color: rgba(0, 0, 0, 0.25);">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-sm-4 col-md-3 col-xs-12 itemss" >
+                <a href="javascript:;">
+                    <div class="row kapian">
+                        <div class="col-md-3 col-xs-3 bh-box">
+                            <img class="tx" src="" alt="">
+                            <!-- 已上架 -->
+                            <span class="put-info shangjia" style="display:none;">已上架</span>
+                            <!-- 下架 -->
+                            <span class="put-info butongguo" >已下架</span>
+
+
+                        </div>
+
+                        <div class="col-md-9 col-xs-9 bh-box">
+                            <div class="row status-box">
+                                <h4 class="T0LMTittle">SENSEPLAY Race pro版 星空灰 信号加强版</h4>
+                            </div>
+                            <span class="row upc-info">
+                                <span class="sl" style="width:20%;">upc:</span>
+                                <span class="sl" >2393438473475</span>
+                            </span>
+                            <span class="row upc-info">
+                                <!--<span class="sl">机构：</span>
+                                <span>上海感悟</span>-->
+                            </span>
+                        </div>
+                    </div>
+                    <!-- 操作按钮 -->
+                    <div class="row operate-box operate-xj">
+                        <a href="" class="col-md-6 col-xs-6 bj hui">编辑信息</a>
+                        <a href="" class="col-md-6 col-xs-6">下架</a>
+                    </div>
+                </a>
+            </div>
+
+
+
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+            <div class="o_kanban_record o_kanban_ghost col-sm-4 col-md-3 col-xs-12 itemss" ></div>
+        </div>
+         <nav clas="footer" aria-label="...">
+            <ul class="pagination" style="float:right;padding-right:28px;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+
+            </ul>
+        </nav>
+
+
+       <!-- 没有搜索到任何信息时出现 -->
+        <div class="none-info" style="display:none;">
+            <img src="../../dist/images/errorview-empty.png" alt="" >
+            <h5 class="non-message">没有找到相关员工~</h5>
+        </div>
+    </div>
+
+    <!-- 添加upc弹框 -->
+    <div class="del-box" style="display:none;">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+            <h4 class="dia-title">请输入商品UPC</h4>
+            <div style="position:relative;">
+                <input type="text" class="textarea" placeholder="请输入商品UPC">
+                 <span style="position:absolute;top:40px;left:0%;font-size:10px;color:red;"> *请输入正确的参数！</span>
+            </div>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="../../dist/js/login.js"></script>
+
+<script type="text/javascript" charset="utf-8" async defer>
+
+   // $('.drop-boxa').click(function(){
+   //      $(this).find('.drop-select').toggle();
+   //  })
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!con.is(e.target) && con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+    })
+    // 点击添加商品  弹出添加upc弹框
+    $('.addpro').click(function(){
+        $('.del-box').show();
+    })
+    // 删除提示框
+    $('.del-box').find('.cancel').click(function(){
+        $('.del-box').hide();
+        window.location.href="";
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.del-box').hide();
+        window.location.href="";
+    })
+</script>
+
+
+
+
+
+

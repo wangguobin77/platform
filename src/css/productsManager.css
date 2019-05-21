@@ -1,0 +1,183 @@
+/*
+* @Author: Marte
+* @Date:   2018-07-16 15:50:09
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-17 17:12:53
+*/
+/*
+卡片样式
+ */
+.itemss .bh-box:nth-child(2) span {
+    color: rgba(0,0,0,.45);
+    line-height: 26px;
+    padding:0;
+}
+.itemss span.upc-info{
+    overflow:hidden;
+    width:100%;
+    display:flex;
+}
+.itemss .upc-info span:nth-child(1){
+    width:20%;
+    line-height:26px;
+    font-size: 12px;
+}
+.itemss .upc-info span:nth-child(2){
+   flex-grow:1;
+   width:80%;
+   line-height:26px;
+   font-size: 12px;
+}
+
+.itemss .bh-box .butongguo {
+     background-color: rgba(0, 0, 0, 0.25);
+
+}
+.operate-box a.bj {
+  color:#1890ff;
+}
+
+/* 添加upc弹框*/
+.del-box .dia-title{
+  font-size: 16px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height:24px;
+  letter-spacing: normal;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.85);
+  margin-bottom:24px;
+
+}
+.del-box .textarea{
+    width: 336px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    border: solid 1px rgba(0, 0, 0, 0.15);
+    margin-bottom:32px;
+    outline:none;
+    padding:0 10px;
+}
+
+/*提示信息*/
+/* 内容区提示信息
+*/
+
+.waring-ts{
+    height: 40px;
+    border-radius: 4px;
+    border: solid 1px #52C41A;
+    display:flex;
+    align-items:center;
+    padding-left:16px;
+    box-sizing:border-box;
+    margin:0 24px;
+    display:none;
+}
+.waring-ts span:nth-child(1){
+    font-size:24px;
+    color:#fff;
+    margin-right:16px;
+}
+.waring-ts span:nth-child(2){
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.71;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.65);
+}
+h4.xz{
+    justify-content:flex-start;
+}
+.drop-select li{
+  font-size:14px;
+}
+.bottom-menu{
+  display:flex;
+  justify-content:space-between;
+}
+
+
+/*导航下搜索框*/
+.search-boxa{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  width:1325px;
+
+}
+/*
+所诉机构
+ */
+.ssjg{
+  max-width:256px;
+
+}
+.ss-rq{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+.ss-rq h4{
+  width:70px;
+  text-align:left;
+  font-size:14px;
+  line-height:24px;
+  font-size:14px;
+  padding-left:0;
+  border:0;
+}
+.ss-rq span{
+  font-size:14px;
+}
+.ss-rq li{
+  font-size:14px;
+}
+.ss-rq .drop-boxa{
+  width:176px;
+}
+.flei{
+
+}
+/*
+分类搜索
+ */
+.flei{
+  width:225px;
+  margin-left:48px;
+}
+.flei h4{
+    width:42px;
+    line-height:24px;
+}
+/*
+状态
+ */
+.zhuangt{
+  width:185px;
+  margin-left:80px;
+}
+.zhuangt h4{
+  width:42px;
+}
+.zhuangt .drop-boxa{
+  width:136px;
+}
+/*
+搜索框体
+ */
+.ssuo-rq{
+  width:480px;
+  display:flex;
+  align-items:center;
+  margin-right:0;
+}
+.ssuo-rq .search-box{
+  width:208px;
+}
+
+

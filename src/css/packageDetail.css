@@ -1,0 +1,33 @@
+/*
+* @Author: Marte
+* @Date:   2018-08-28 19:25:20
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-28 20:04:56
+*/
+
+input[type="radio"] + label::before {
+    border: solid 1px rgba(0, 0, 0, 0.15);
+
+}
+
+input[type="radio"]:checked + label::before {
+    background-color:rgba(0, 0, 0, 0.15);
+    border: solid 1px rgba(0, 0, 0, 0.15);
+}
+.xz input:checked+label {
+    border: 1px solid rgba(0, 0, 0, 0.15) ;
+    background: url(../images/checkhui.jpg) 100% 100% no-repeat ;
+}
+.select-info .beizhu{
+   background:rgba(0, 0, 0, 0.04);
+}
+input[disabled] {
+   background-color:transparent;
+}
+.time-box{
+   background:rgba(0, 0, 0, 0.04);
+
+}
+.jeinput{
+    padding:5px;
+}

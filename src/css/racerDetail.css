@@ -1,0 +1,15 @@
+input[type=radio]:checked+label::before {
+    background-color: #BFBFBF;
+    background-clip: content-box;
+    padding: .15em;
+    border-color: #BFBFBF;
+}
+.content-wrap .tc-box input{
+    background:none !important;
+}
+.content-wrap .tc-box{
+    background-color: rgba(0,0,0,.04) !important;
+}
+.content-wrap .textarea{
+     background-color: rgba(0,0,0,.04) !important;
+}

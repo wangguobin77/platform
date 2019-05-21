@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/roleManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/chainLog.css">
+
+    <script src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body style="overflow-y:scroll;">
+
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">供应链</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor "><a href="javascript:;">入库</a></li>
+
+                    <li class="items cursor"><a href="javascript:;">出库</a></li>
+                    <li class="items cursor items-active "><a href="javascript:;">退货</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">入库</a></li>
+                    <li class="cursor"><a href="">出库</a></li>
+                    <li class="cursor"><a href="">退货</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+
+    <div class="container-fluid" style="display:flex;flex-grow:1;flex-direction: column;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu" style="margin-top:0;">
+            <h4>直接入库  /  操作日志</h4>
+            <div class="right-box">
+                <div class="add-btn cursor">
+                   <a href="stockReturnList.html" style="color:#fff;">返回列表</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表  -->
+        <div class="table-responsive" style="padding:0 24px;">
+            <table class="table table-striped table-bordered">
+                 <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th>序号</th>
+                        <th>操作人</th>
+                        <th>操作内容</th>
+                        <th>操作时间</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    <tr>
+                        <td >1</td>
+                        <td >李大超</td>
+                        <td>修改了商品为：序号3 upc3847438574563 商品名称SENSEPLAY Race pro版 星空灰 信号加强版 分类 遥控器/单手/surf 数量20；序号4 upc3847438574563 商品名称SENSEPLAY Race pro版 星空灰 信号加强版 分类 遥控器/单手/surf 数量20 ；序号5 upc3847438574563 商品名称SENSEPLAY Race pro版 星空灰 信号加强版 分类 遥控器/单手/surf 数量20</td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                    <tr>
+                        <td >2</td>
+                        <td >李大超 </td>
+                        <td >创智天地1号仓</td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                   <tr>
+                        <td >3</td>
+                        <td >李大超 </td>
+                        <td >创智天地1号仓</td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                    <tr>
+                        <td >4</td>
+                        <td >李大超 </td>
+                        <td >创智天地1号仓 </td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                    <tr>
+                        <td >5</td>
+                        <td >李大超 </td>
+                        <td >创智天地1号仓 </td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                    <tr>
+                        <td >6</td>
+                        <td >李大超 </td>
+                        <td >创智天地1号仓 </td>
+                        <td >2018-07-10 15:25 </td>
+
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

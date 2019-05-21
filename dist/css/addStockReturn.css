@@ -1,0 +1,2 @@
+.table tr td,.table tr th{position:relative}.table tr input[type=checkbox],.table tr label{position:absolute;left:15px;top:8px;height:16px;width:16px}.table tr input[type=checkbox]{opacity:0;z-index:9999999999;cursor:pointer;margin-right:9px;margin-top:0}.table tr label{border-radius:0;border:1px solid #ced7de;background:#fff}.table tr input:checked+label{border:1px solid #1890ff;background:url(../images/check_select_default.png) 100% 100% no-repeat;cursor:pointer;background-size:100%}select{outline:0}.btn-sub{margin-top:223px}
+/*# sourceMappingURL=addStockReturn.css.map */

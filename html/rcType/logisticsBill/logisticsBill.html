@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/roleManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/logisticsBill.css">
+
+    <script src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body class="">
+    <!-- 导航start -->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">供应链</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor"><a href="javascript:;">入库</a></li>
+
+                    <li class="items cursor"><a href="javascript:;">出库</a></li>
+                    <li class="items cursor items-active"><a href="javascript:;">物流</a></li>
+
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">入库</a></li>
+                    <li class="cursor"><a href="">出库</a></li>
+                    <li class="cursor"><a href="">退货</a></li>
+                    <li class="cursor"><a href="">物流</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+    <div class="container-fluid" style="display:flex;flex-grow:1;flex-direction: column;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu" style="margin-top:0;">
+            <div class="col-lg-12 col-md-12" style="padding:0;">
+                <h4 class="col-lg-1 col-md-1">物流</h4>
+
+                <div class=" search-boxa col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 right-box" style="padding:0;">
+                    <div class="sousuo-rq col-lg-4">
+                        <h6 class="col-md-5 biaoti">快递公司：</h6>
+                        <div class="col-md-7 drop-boxa  cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select" >
+                                <li>全部</li>
+                                <li>顺丰</li>
+                                <li>圆通</li>
+                                <li>德邦</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 状态 -->
+                    <div class=" col-lg-2  sousuo-rq">
+                        <h6 class=" biaoti">状态：</h6>
+                        <div class="drop-boxa  cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select" >
+                                <li>已出库</li>
+                                <li>待审核</li>
+                                <li>已拒绝</li>
+                                <li>草稿</li>
+                                <li>已作废</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 搜索 -->
+                    <div class="ss-kuang col-lg-2">
+                        <div class="search-box">
+                            <span class=" glyphicon glyphicon-search"></span>
+                            <input type="text" name="" placeholder="搜索出库单号、订单号" style="border:0;outline:none;" class="ss-upc sl">
+                        </div>
+                        <div class="">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 响应式导航下搜索 -->
+            <div class="row search-boxb" style="display:none;">
+                <div class="add-btn cursor xszt">
+                    <a href="javascript:;">销售自提</a>
+
+                </div>
+                 <div class="add-btn cursor zjck">
+                    <a href="directOutbound.html">直接出库</a>
+
+                </div>
+                <div class="font_family icon-menu_home btn-menu"></div>
+
+
+                <div class="row res-search-wrap col-md-10  col-sm-10 col-xs-10 btn-menu-box" style="display:none;">
+                   <!-- 部门 -->
+                    <div class="row" >
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">类型：</h4>
+                        <div class="drop-boxa col-md-9 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select">
+                                 <li>全部</li>
+                                <li>财务</li>
+                                <li>IT</li>
+                                <li>后台</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 状态 -->
+                    <div class="row" >
+                        <h4  class="col-md-2 zhiwei" style="border-left:0;">状态：</h4>
+                        <div class="drop-boxa col-md-9 cursor">
+                            全部
+                            <span class="arrow-down font_family icon-arrow_open_line"></span>
+                            <ul class="drop-select" style="min-height:90px;">
+                                <li>已出库</li>
+                                <li>待审核</li>
+                                <li>已拒绝</li>
+                                <li>草稿</li>
+                                <li>已作废</li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                    <div class="row" style="display:flex;justify-content:space-around;margin-top:15px;">
+                        <div class="search-box ">
+                            <span class=" glyphicon glyphicon-search col-md-1 "></span>
+                            <input type="text" name="" placeholder="搜索姓名、工号、手机号" style="border:0;outline:none;" class="sl col-md-10">
+                        </div>
+                        <div class="btn-sousuo">
+                            <div class="btn-ss cursor">搜索</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表  -->
+        <div class="table-responsive" style="padding:0 24px;">
+            <table class="table">
+                 <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th  class="col-md-1 sl">快递单号</th>
+                        <th  class="col-md-2 sl">出库单号</th>
+                        <th  class="col-md-1 sl">出库仓</th>
+                        <th  class="col-md-1 sl">快递公司</th>
+                        <th  class="col-md-1 sl">创建时间 </th>
+                        <th  class="col-md-1 sl">发货时间 </th>
+                        <th  class="col-md-1 sl">发货人</th>
+                        <th  class="col-md-1 sl">收货人</th>
+                        <th  class="col-md-1 sl">状态</th>
+                        <th  class="col-md-2 sl">操作</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">销售自提</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">销售自提</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">销售自提</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">销售自提</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 待审核 -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">销售自提</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl"></td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi daish">已出货</span></td>
+                        <td class="sl opr-box" style="">
+                            <div class="czuo-box" style="display: flex;align-items: center;justify-content: flex-end;">
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                                <a href="chainLog.html" class="font_family icon-operation_approval"
+                                ></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- 草稿   -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl"></td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi caogao">待出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+                                <a href="editLogistics.html" class="font_family icon-operation_edit"></a>
+                                <span class='xian'></span>
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 拒绝   -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl"></td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi jujue">待出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+                                <a href="editLogistics.html" class="font_family icon-operation_edit"></a>
+                                <span class='xian'></span>
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 已作废 -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi zuofei">待出货</span></td>
+                        <td class="sl opr-box" >
+                            <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                           <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                           <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl"></td>
+                        <td class="sl">创智天地2号仓 </td>
+                        <td class="sl">直接出库</td>
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <td class="sl zz-box"><span class="zaizhi rk">已出货</span></td>
+                        <td class="sl opr-box" >
+                           <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                                <a class="font_family icon-operation_delate btn-del"></a>
+                                <span class='xian'></span>
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div>
+                        </td>
+                    </tr>
+
+                 </tbody>
+            </table>
+        </div>
+
+        <!-- 搜索时没有此信息时显示 -->
+        <div class="none-info" style="display:none;">
+            <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;padding:0 24px;">
+                <div class="none-info" style="margin:0 auto;">
+                    <img src="../../../dist/images/errorview-empty.png" alt="" >
+                    <h5 class="non-message">没有找到相关信息~</h5>
+                </div>
+            </div>
+        </div>
+        <!-- 无此消息提示 end -->
+        <nav clas="footer" aria-label="..." style="padding-right:24px;" >
+            <ul class="pagination" style="float:right;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- 删除提示框 -->
+    <div class="del-box delete">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+                <img src="../../../dist/images/warning-large.png" alt="">
+                <h6>是否确认删除?</h6>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 扫码录入提示框 -->
+    <div class="del-box smlr-box">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+            <h4>请扫码录入订单码</h4>
+            <div class="text-k">
+                <input type="text" name="" class="sm-sr">
+                <span class="ts">*请输入正确的订单码</span>
+            </div>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+    // 点击删除
+    $('.btn-del').click(function(){
+        $('.delete').show();
+    })
+    $('.del-box').find('.cancel').click(function(){
+        $('.delete').hide();
+        window.location.href="";
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.delete').hide();
+        window.location.href="";
+    })
+
+    // 下拉框
+    $('.drop-boxa').click(function(){
+        $(this).find('.drop-select').toggle();
+        // css(
+        // 'display', 'block').parent('').siblings('').children('ul').css('display','none');
+    })
+
+
+/*-------------------------------------------------扫码录入提示框 处理--------------------------*/
+    // 点击销售字体淡出提示框体
+    $('.xszt').click(function(){
+        $('.smlr-box').show();
+    })
+    // 点击确认进入销售自提详情
+
+    $('.smlr-box').find('div.confirm').click(function(){
+        window.location.href="salesDetail.html";
+    })
+
+</script>
+</body>
+</html>

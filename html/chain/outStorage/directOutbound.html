@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/directOutbound.css">
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+    }
+
+</style>
+
+
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">供应链</h3>
+            </div>
+        </div>
+        <div class="col-md-6 row-xx">
+            <ul class="m-menu" style="height:64px;">
+                <li class="items cursor"><a href="javascript:;">入库</a></li>
+                <li class="items cursor items-active"><a href="javascript:;">出库</a></li>
+                <li class="items cursor"><a href="javascript:;">退货</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+           <ul class="col-sm-12">
+                <li class="cursor"><a href="../putStorage/chainList.html">入库</a></li>
+                <li class="cursor"><a href="outStorageList.html">出库</a></li>
+                <li class="cursor"><a href="">退货</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+
+<!-- 内容区 -->
+<div class="container-fluid" style="flex-grow:1;margin-top:64px;padding:0;width:100%;">
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>出库  /  直接出库</h4>
+        <div class="right-box">
+            <div class="add-btn cursor btn-log">
+                <a href="chainLog.html">操作日志</a>
+            </div>
+            <div class="add-btn cursor btn-back">
+                <a href="outStorageList.html">返回列表</a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+        <div class="row content-wrap refuse-box" style="margin-bottom:0;">
+            <div class="col-md-12 refuse-info">
+                <span class="font_family icon-warning_large icon-warning"></span>
+                <h6>拒绝理由：物流单号为无效单号</h6>
+
+            </div>
+         </div>
+        <div class="row content-wrap" style="margin-bottom:0;">
+            <!-- 出库单状态-->
+            <div class="col-md-6 row-xx cg">
+                <h4 class="col-md-3 T1RRTittle">出库单状态：</h4>
+                <div class="col-md-9 input-box row-xx-none">
+                    草稿
+                </div>
+
+            </div>
+
+            <!-- 出库单号 -->
+            <div class="col-md-6 row-xx">
+                 <h4 class="col-md-3 T1RRTittle">出库单号：</h4>
+                <div class="col-md-9 input-box row-xx-none">
+                    2839257485438457
+                </div>
+
+            </div>
+
+             <!-- 经办人-->
+            <div class="col-md-6 row-xx">
+                 <h4 class="col-md-3 T1RRTittle">经办人：</h4>
+                <div class="col-md-9 input-box row-xx-none">
+                   周大侠
+                </div>
+            </div>
+            <!-- 审核人 -->
+            <div class="col-md-6 row-xx">
+                 <h4 class="col-md-3 T1RRTittle">审核人：</h4>
+                <div class="col-md-9 input-box row-xx-none">
+                   傅小小
+                </div>
+            </div>
+            <!-- 出库仓 -->
+            <div class=" col-md-6 row-xx ">
+                <h4 class="col-md-3 T1RRTittle">出库仓：</h4>
+                <select name=""  class="col-md-9 col-xs-12 input-box select-input" >
+                    <option value="1">创智天地1号仓</option>
+                    <option value="2">创智天地2号仓</option>
+                    <option value="3">创智天地3号仓</option>
+                    <option value="4">创智天地4号仓</option>
+
+                </select>
+            </div>
+             <!-- 发货方式 -->
+            <div class=" col-md-6 row-xx ">
+                <h4 class="col-md-3 T1RRTittle">发货方式：</h4>
+                <div class="col-md-9 input-box row-xx-none">
+                    <div class="male col-md-6" >
+                        <input type="radio" id="male" name="bjjb" value="1" checked />
+                        <label for="male" style="font-size:14px">物流信息</label>
+                    </div>
+                    <div class="male col-md-6">
+                        <input type="radio" id="manu" name="bjjb" value="2"/>
+                        <label for="manu" style="font-size:14px">无需物流</label>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row content-wrap" style="margin-bottom:0;">
+            <!-- 备注 -->
+            <div class="col-md-6 row-xx">
+                <h4 class="col-md-3 T1RRTittle">备注<span>(选填)</span> &nbsp;：</h4>
+                <textarea class="div-textarea col-md-9" style="outline:none;height:104px;"></textarea>
+            </div>
+
+
+        </div>
+
+        <!-- table列表 -->
+        <div class="row content-wrap table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th width="112px"  class="col-md-1 sl">序号</th>
+                        <th width="184px"  class="col-md-1 sl">upc（扫码录入）</th>
+                        <th width="536px"  class="col-md-4 sl">商品名称</th>
+                        <th width="168px"  class="col-md-1 sl">分类 </th>
+                        <th width="120px"  class="col-md-1 sl">入库数量</th>
+                        <th width="112px"  class="col-md-1 sl" >操作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="sl" width="112px">1</td>
+                        <td class="sl zz-box l-box" width="184px">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl" width="536px">创智天地1号仓/创智天地2号仓/创智天地3号 </td>
+                        <td class="sl" width="168px">遥控器/单手/surf </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box s-box" width="120px">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl opr-box" width="112px">
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl" width="112px">2</td>
+                        <td class="sl zz-box l-box" width="184px">
+                            <input class="text-box sl">
+                        </td>
+                        <td class="sl" width="536px">创智天地1号仓/创智天地2号仓/创智天地3号 </td>
+                        <td class="sl" width="168px">遥控器/单手/surf </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box s-box" width="120px">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl opr-box " width="112px">
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl" width="112px">3</td>
+                        <td class="sl zz-box l-box" width="184px">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl" width="536px">创智天地1号仓/创智天地2号仓/创智天地3号 </td>
+                        <td class="sl" width="168px">遥控器/单手/surf </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box s-box" width="120px">
+                            <input class="text-box sl" >
+                        </td>
+                        <td class="sl opr-box" width="112px">
+                            <span class="font_family icon-operation_delate btn-del cursor"></span>
+                        </td>
+                    </tr>
+
+
+                    <!-- 合计 -->
+                    <tr class="total">
+                        <td class="sl">合计</td>
+                        <td class="sl zz-box"></td>
+                        <td class="sl"></td>
+                        <td class="sl">3种</td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                           180
+                        </td>
+                        <td class="sl opr-box" >
+                        </td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+        <!-- 保存操作 -->
+        <div class="save-box">
+            <button type="button" class="btn-sub">提交</button> <!-- 提交以后可以看到详情 -->
+            <button type="button" class="btn-draft">保存至草稿</button>
+        </div>
+
+    </div>
+</div>
+<!-- 删除提示框 -->
+<div class="del-box">
+    <div class="dialog">
+        <span class="font_family icon-close cursor"></span>
+            <img src="../../../dist/images/warning-large.png" alt="">
+            <h6>是否确认删除?</h6>
+        <div class="operate-del">
+            <div class="cursor cancel"> 取消</div>
+            <div class="cursor confirm">确认</div>
+
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+<script src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+<script src="../../../dist/js/public/bootstrap.min.js"></script>
+
+<script type="text/javascript">
+    // 删除提示框
+    $('.table').delegate('.btn-del','click',function(e){
+        e.preventDefault();
+        $('.del-box').show();
+    })
+    $('.del-box').find('.cancel').click(function(){
+        $('.del-box').hide();
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.del-box').hide();
+    })
+
+
+    //扫描upc码 获取skuid及相对应的商品信息  判断table中行数以及操作区删除按键的出现
+    var trs=$('tbody tr');
+    console.dir(trs);
+    if(trs.length>2||trs.length==2){
+        $('.opr-box').find('.btn-del').show();
+
+    }else{
+        $('.opr-box').find('.btn-del').hide();
+    }
+
+</script>
+
+
+
+

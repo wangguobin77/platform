@@ -1,0 +1,23 @@
+/*
+* @Author: Marte
+* @Date:   2018-07-17 17:10:13
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-07-17 17:17:41
+*/
+.row-xx .xiajia{
+    line-height:40px; background-color: rgba(0, 0, 0, 0.04);color: rgba(0, 0, 0, 0.65);
+}
+.price-box div.input-box {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.price-box div.input-box {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+#date select {
+    background-color: rgba(0, 0, 0, 0.04);
+}
+.content-wrap .textarea{
+    background-color: rgba(0, 0, 0, 0.04);
+
+}

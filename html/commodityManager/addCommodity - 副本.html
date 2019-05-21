@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff.css">
+
+    <link rel="stylesheet" href="../../dist/css/public/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addCommodity.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/dialog.css">
+    <script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../../dist/js/public/Tdrag.js"></script>
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+    }
+
+    .item_content ul { list-style: none; }
+    .item_content  .item-box { width: 200px; height: 160px; float: left; margin: 10px; }
+    .item_content { width: 740px; height: auto; border: 1px solid #ccc; float: left; }
+    .item_content .item { width: 200px; height: 120px; line-height: 120px; text-align: center; cursor: pointer; background: #ccc; }
+    .item_content .item img { width: 200px; height: 120px; border-radius: 6px; }
+    .close { display: block; width: 20px; height: 20px; top: 0; right: 0; z-index: 9999; position: absolute; text-align: center; font-size: 16px; cursor: pointer; color: aliceblue }
+
+
+</style>
+
+
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">基础设置</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor"><a href="javascript:;">商品管理</a></li>
+                    <li class="items cursor items-active" style="min-width:128px;"><a href="javascript:;">电商商品管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">属性管理</a></li>
+                    <li class="items cursor"><a href="javascript:;">分类机构</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品管理</a></li>
+                    <li class="cursor" style="min-width:128px;"><a href="">电商商品管理</a></li>
+                    <li class="cursor"><a href="">属性管理</a></li>
+                    <li class="cursor"><a href="">分类机构</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;margin-top:64px;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>电商商品管理  /  添加商品 </h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor" style="min-width:128px;">
+                    <a href="">选择商品模板</a>
+                </div>
+                <div class="add-btn cursor">
+                    <a href="commodityManagement.html">返回列表</a>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="row col-md-8 col-md-offset-2 " style="padding-left:24px;padding-right:24px;">
+
+            <div class="row content-wrap">
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">商品名称：</h4>
+                    <div class="col-md-8 input-box">
+                        <input type="text" name="" placeholder="请输入商品名称" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- 规格参数 -->
+        <div class="row col-md-8 col-md-offset-2 pro-attr-box" style="min-height:64px;padding-bottom:24px;">
+            <div class="row" style="margin-top:12px;">
+                <h4 class="col-md-2 cssm" style="line-height:40px;">规格参数:</h4>
+                <div class='sc-box col-md-10 content-wrap ' style="margin-bottom:0;">
+                    <div class='col-md-12 add-ggcs cursor'>
+                        添加规格参数
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 发布 -->
+        <div class="row col-md-8 col-md-offset-2 pro-attr-box" style="background:none;min-height:40px;">
+            <div class="row"><h4 class="col-md-2 cssm"></h4></div>
+            <div class="row content-wrap col-md-offset-2">
+                <div class='prod cursor'>发布</div>
+            </div>
+        </div>
+    </div>
+    <!-- 关联商品box -->
+    <div class="glsp-box del-box">
+        <div class="container product-container">
+            <div class="col-md-8 col-md-offset-2 product-link">
+                <!-- 关闭按钮 -->
+                <div class=" close-row">
+                    <span class="font_family icon-close btn-close"></span>
+                </div>
+                <div class=" title-row">
+                    选择关联商品
+                </div>
+                <!-- 搜素 -->
+                <div class=" search-row">
+                    <div class="col-md-10 glyphicon glyphicon-search" contenteditable="true">
+
+                    </div>
+                    <div class="col-md-2 ss-btn">
+                        搜索
+                    </div>
+
+                </div>
+               <table class="table">
+                     <thead>
+                       <tr>
+                         <th width="24%" class="sl">UPC</th>
+                         <th width="48%" class="sl">商品名称</th>
+                         <th width="28%" class="sl">分类</th>
+                       </tr>
+                     </thead>
+                     <tbody>
+                       <tr>
+                         <td width="24%" class="sl">384743857555</td>
+                         <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                         <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                         <td width="24%" class="sl">384743857555</td>
+                         <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                         <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                         <td width="24%" class="sl">384743857555</td>
+                         <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                         <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                        <tr>
+                         <td width="24%" class="sl">384743857555</td>
+                         <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                         <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                         <td width="24%" class="sl">384743857555</td>
+                         <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                         <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                             <td width="24%" class="sl">384743857555</td>
+                             <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                             <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                        <tr>
+                             <td width="24%" class="sl">384743857555</td>
+                             <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                             <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                             <td width="24%" class="sl">384743857555</td>
+                             <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                             <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                       <tr>
+                             <td width="24%" class="sl">384743857555</td>
+                             <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                             <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                        <tr>
+                             <td width="24%" class="sl">384743857555</td>
+                             <td width="48%" class="sl">SENSEPLAY Race pro版 星空灰 信号加强版 128G</td>
+                             <td width="28%" class="sl">遥控器</td>
+                       </tr>
+                    </tbody>
+                </table>
+
+                <nav clas="footer" aria-label="..."  >
+                    <ul class="pagination" style="float:right;">
+                        <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                        <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                        <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+
+                    </ul>
+                </nav>
+
+                <hr>
+                <!-- 操作区域 -->
+                <div class="opr-bar">
+                    <div class="opr-box">
+                        <span class="cursor">取消</span>
+                        <span class="cursor">确认</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../dist/js/public/kendo.all.min.js"></script>
+<script src="../../dist/js/staffManage.js"></script>
+<script src="../../dist/js/addCommodity.js"></script>
+
+<script>
+    $('.bread-menu').click(function(){
+        event.stopPropagation();
+        $('.res-992-m-menubox').toggle();
+
+    });
+    $(document).click(function(e){
+        var _con = $('.res-992-m-menubox');   // 设置目标区域
+        if(!_con.is(e.target) && _con.has(e.target).length === 0){ // Mark 1
+            $('.res-992-m-menubox').css('display','none');
+        }
+
+    })
+
+    //上传商品配图
+     function imgUpload_sm(obj){
+        // console.log(obj);
+       var vvw=obj.getAttribute('data-width');
+       var vvh=obj.getAttribute('data-height');
+       var imgarr=[],
+            img_none=[];
+       var imgs=$('.imgs');
+        imgarr.push(imgs);
+
+
+       var fileData = obj.files[0];
+       console.log(size);
+       // var type=fileData.type;
+       // console.log(type);
+       var size = fileData.size / 1024;
+       if(size>1000){
+           alert("附件不能大1M");
+           return;
+      }
+       var reader = new FileReader();
+       console.log(reader);
+
+       reader.onload = function (e) {
+
+        var data = e.target.result;
+        console.log(data);
+
+        //加载图片获取图片真实宽度和高度
+        var image = new Image();
+        image.onload=function(){
+            var width = image.width+'px';
+            var height = image.height+'px';
+            if(width!=vvw && height!=vvh){
+                alert('规格错误，请上传'+vvw+"*"+vvh+'的图片');
+                $('input[name="picurl"]').val(null);
+                return false;
+            }
+                $(obj).prev("i").show();
+                   // $(obj).prev("i").html("<span class='close-icon'>"+"</span>"+"<img class='img-pic cursor' data-pic='"+data+"' src='"+data+"'>");
+                   $(obj).parent().prev().find("i").html("<span class='close-icon'>"+"</span>"+"<img class='img-pic cursor' data-pic='"+data+"' src='"+data+"'>");
+
+                for(var i=0;i<imgarr.length;i++){
+                    if(imgarr[i].attr('src')!=undefined){
+                        img_none.push(imgarr[i]);
+                        console.log(img_none.length);
+
+                    }
+
+                }
+        };
+        image.src= data;
+    };
+
+    //读取文件的base64数据
+    reader.readAsDataURL(fileData);
+ }
+
+</script>
+
+
+
+
+

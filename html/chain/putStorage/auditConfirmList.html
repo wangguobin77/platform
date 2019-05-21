@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/addChain.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/auditDetail.css">
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+    }
+    /*----------用来移除向下箭头----------*/
+    input[type="date"]::-webkit-calendar-picker-indicator {
+       /*display: none;*/
+       outline:none;
+       cursor:pointer;
+    }
+
+
+    /*----------用来移除叉叉按钮----------*/
+    input[type="date"]::-webkit-clear-button{
+       display:none;
+
+    }
+</style>
+
+<!-- 导航 start -->
+<div class="container-fluid nav-header">
+    <div class="row">
+        <div class="col-md-2 col-sm-6 col-xs-6">
+            <div class="left-logo">
+                <span class="icon-menu font_family icon-menu_home cursor"></span>
+                <h3 class="H3LSWhite">供应链</h3>
+            </div>
+        </div>
+        <div class="col-md-6 row-xx">
+            <ul class="m-menu" style="height:64px;">
+                <li class="items cursor items-active"><a href="javascript:;">入库</a></li>
+                <li class="items cursor"><a href="javascript:;">出库</a></li>
+                <li class="items cursor"><a href="javascript:;">退货</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4 user-info-xx">
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+            <div class="userinfo-box">
+                <span class="icon-user font_family"></span>
+                <h4 class="sl">username</h4>
+                <span class="icon-arrow_down_solid font_family"></span>
+            </div>
+        </div>
+
+        <!-- 小于992px时出现 -->
+        <div class="col-sm-6 col-xs-6 res-992-m-menu">
+            <!-- 面包屑导航按钮 -->
+            <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+        </div>
+        <div class="row res-992-m-menubox">
+           <ul class="col-sm-12">
+                <li class="cursor"><a href="">入库</a></li>
+                <li class="cursor"><a href="">出库</a></li>
+                <li class="cursor"><a href="">退货</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                        <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+
+                    <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                        <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                        <span class="factory-xx sl">周大侠</span>
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">修改手机号</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">退出登录</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--导航结束-->
+
+<!-- 内容区 -->
+<div class="container-fluid" style="flex-grow:1;margin-top:64px;padding:0;width:100%;">
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>直接入库  /  添加入库</h4>
+
+        <div class="right-box">
+            <div class="add-btn cursor btn-log">
+                <a href="chainLog.html">操作日志</a>
+            </div>
+            <div class="add-btn cursor btn-back">
+                <a href="chainList.html">返回列表</a>
+            </div>
+        </div>
+    </div>
+    <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+        <div class="row content-wrap" style="margin-bottom:0;">
+            <!-- 分发分类 -->
+            <div class=" col-md-6 row-xx ">
+                <h4 class="col-md-3 T1RRTittle">入库仓：</h4>
+                <select name=""  class="col-md-9 col-xs-12 input-box select-input" style="outline:none;" disabled>
+                    <option value="1">创智天地1号仓</option>
+                    <option value="2">创智天地2号仓</option>
+                    <option value="3">创智天地3号仓</option>
+                    <option value="4">创智天地4号仓</option>
+
+                </select>
+            </div>
+            <!-- 所属机构 -->
+            <div class="col-md-6 row-xx">
+                <h4 class="col-md-3 T1RRTittle">备注<span>(选填)</span> &nbsp;：</h4>
+                <textarea class="div-textarea col-md-9" style="outline:none;" disabled></textarea>
+            </div>
+        </div>
+
+        <!-- table列表 -->
+        <div class="row content-wrap table-responsive">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th width="160px"  class="col-md-1 sl">序号</th>
+                        <th width="320px"  class="col-md-1 sl">upc（扫码录入）</th>
+                        <th width="320px"  class="col-md-4 sl">商品名称</th>
+                        <th width="160px"  class="col-md-1 sl">分类 </th>
+                        <th width="160px"  class="col-md-1 sl">入库数量</th>
+                        <th width="160px"  class="col-md-1 sl" >操作</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="sl">1</td>
+                        <td class="sl zz-box">
+                            3847438575553
+                        </td>
+                        <td class="sl">创智天地1号仓/创智天地2号仓/创智天地3号 </td>
+                        <td class="sl">谭敏仪 </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                            60
+                        </td>
+                        <td class="sl opr-box" >
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">2</td>
+                        <td class="sl zz-box">
+                           3847438575553
+                        </td>
+                        <td class="sl">创智天地1号仓</td>
+                        <td class="sl">谢敏 </td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                            60
+                        </td>
+                         <td class="sl opr-box" >
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">3</td>
+                        <td class="sl zz-box">
+                            3847438575553
+                        </td>
+                        <td class="sl">创智天地1号仓</td>
+                        <td class="sl">阿狸</td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                            60
+                        </td>
+                        <td class="sl opr-box" >
+
+                        </td>
+                    </tr>
+
+                    <!-- 合计 -->
+                    <tr class="total">
+                        <td class="sl">合计</td>
+                        <td class="sl zz-box"></td>
+                        <td class="sl"></td>
+                        <td class="sl">3种</td>
+                        <!-- 数量 -->
+                        <td class="sl zz-box">
+                           180
+                        </td>
+                        <td class="sl opr-box"></td>
+                    </tr>
+                 </tbody>
+            </table>
+        </div>
+
+        <!-- 审核操作区域  需要判断权限普通员工不可以操作    只有审核人登录时出现此操作-->
+        <div class="save-box">
+            <button type="button" class="btn-sub">确认提交</button>
+            <button type="button" class="btn-refuse">拒绝提交</button>
+        </div>
+
+    </div>
+</div>
+<!-- 点击拒绝提交 -->
+<div class="del-box">
+    <div class="dialog refuse-box">
+        <span class="font_family icon-close cursor btn-close"></span>
+        <h4>请输入拒绝理由</h4>
+        <div class="text" contenteditable="true">
+
+        </div>
+        <div class="operate-del">
+            <div class="cursor cancel"> 取消</div>
+            <div class="cursor confirm">确认</div>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
+<script type="text/javascript" src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../../dist/js/addChain.js"></script>
+<script>
+    // 信息填写完毕后 提交值审核详情页
+    $('.btn-sub').click(function(){
+        window.location.href="auditDetailList.html";
+    })
+    // 点击保存至草稿箱
+    $('.btn-draft').click(function(){
+        window.location.href="draft.html";
+    })
+
+    // 点击拒绝提交
+    $('.btn-refuse').click(function(event) {
+        /* Act on the event */
+        $('.del-box').show();
+    });
+    $('.del-box').find('div.cancel').click(function(){
+        $(this).parent().parent().parent().hide();
+    })
+    $('.del-box').find('span.btn-close').click(function(){
+        $(this).parent().parent().hide();
+    })
+
+
+</script>
+
+
+
+
+

@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addSysterm.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addRacer.css">
+</head>
+<body class="drawer drawer--left o_web_client drawer-close" style="overflow-y:scroll;">
+     <!--导航开始-->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">车手管理</h3>
+                </div>
+            </div>
+            <div class="col-md-4 user-info-xx col-md-offset-6">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">车手管理</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>车手管理  /  添加车手</h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    <a href="racerList.html">返回列表</a>
+                </div>
+            </div>
+        </div>
+        <div class="row col-md-8 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+            <!-- <div class="col-md-6 col-sm-12 col-xs-12"> -->
+            <div class="row content-wrap">
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">关联员工：</h4>
+                    <div class="col-md-8 input-box yg-box">
+                        <div class="xm-box" contenteditable="false">
+                            毛毛
+                        </div>
+                        <a href="relevanceStaff.html" class='edit-xm-box'>修改</a>
+                    </div>
+                </div>
+                <!-- 车手编号 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">车手编号：</h4>
+                    <div class="col-md-8 input-box csbh">
+                        20092
+                    </div>
+                </div>
+            </div>
+
+            <div class="row content-wrap">
+                 <!-- 车手类型 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">车手类型：</h4>
+                    <div class="col-md-8 input-box status" style="padding-left: 0;">
+                        <div class="male" >
+                            <input type="radio" id="male" name="bjjb" value="2" checked onclick="checkgw()" />
+                            <label for="male" style="font-size:14px">感玩车手</label>
+                        </div>
+
+                         <div class="male" style="margin-left:38px;">
+                            <input type="radio" id="manu" name="bjjb" value="2" onclick="checkzl()" />
+                            <label for="manu" style="font-size:14px">助理车手</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">上级车手：</h4>
+                    <!-- 感玩车手checked时显示 -->
+                    <div class="col-md-8 input-box yg-box gw-box">
+                        <div class="xm-box" contenteditable="false"></div>
+                    </div>
+                    <!-- 助理车手 checked时显示 -->
+                    <div class="col-md-8 input-box  zhuli-box yg-box">
+                        <div class="zl yg-box">
+                            <div class="xm-box" contenteditable="false"></div>
+                            <a href="pickTopracer.html" class='edit-xm-box'>关联</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 提成 -->
+            <div class="row content-wrap">
+                 <!-- 首单提成 -->
+                <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">首单提成：</h4>
+                    <div class="col-md-8 input-box tc-box">
+                        <input type="text" name="" placeholder="" class="sl shuru col-md-9">
+                        <h6 class="col-md-1">%</h6>
+                    </div>
+                </div>
+                <!-- 复购提成 -->
+                 <div class="col-md-6 row-xx">
+                    <h4 class="col-md-4 T1RRTittle">复购提成：</h4>
+                     <div class="col-md-8 input-box tc-box">
+                        <input type="text" name="" placeholder="" class="sl shuru col-md-9">
+                        <h6 class="col-md-1">%</h6>
+                    </div>
+                </div>
+            </div>
+            <div class="row content-wrap">
+                <div class="col-md-2" style="text-align:right;">
+                    备注&nbsp;&nbsp;<span style="color: rgba(0, 0, 0, 0.25);">(选填)</span>：
+                </div>
+                <div name="textarea" class="textarea col-md-10" contenteditable="true"></div>
+
+            </div>
+
+            <div class="row content-wrap sub-wrap">
+                <!-- <button type="button" class="btn-tj col-md-offset-2">提交</button> -->
+                <div class="col-md-6 row-xx">
+                    <div class="col-md-8 col-md-offset-4 input-box">
+                       <button type="button" class="btn-tj col-md-offset-2">保存</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/addRacer.js"></script>
+</body>
+</html>

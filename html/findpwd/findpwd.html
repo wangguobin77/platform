@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/findpwd.css">
+
+</head>
+<body style="overflow:hidden;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+</style>
+    <!--导航开始-->
+    <nav class="nav-header">
+        <!-- 左侧 -->
+        <div class="left-logo">
+            <span class="icon-menu font_family icon-logo_white_whole cursor" style="font-size:50px;"></span>
+
+        </div>
+    </nav>
+    <!-- 导航下标注 -->
+    <div class="bottom-menu">
+        <h4>忘记密码</h4>
+
+    </div>
+
+    <!--导航结束-->
+
+    <!-- 下面矿体内容 -->
+    <div class="container-fluid" style="flex-grow:1;">
+        <div class="row">
+            <div class="bz-box col-md-4 col-md-offset-4">
+                <span class="font_family icon-judge_success_small bz"></span>
+                <span class="bz-xian "></span>
+                <span class="font_family icon-judge_success_small bz"></span>
+                <span class=" bz-xian"></span>
+                <span class="font_family icon-judge_success_small bz"></span>
+            </div>
+            <div class="bz-box col-md-4 col-md-offset-4" style="padding-left:0;">
+                <span class="bz-wz">验证身份</span>
+                <span class="bz-xian" style="height:0;"></span>
+                <span class="bz-wz ">修改登录密码</span>
+                <span class=" bz-xian" style="height:0;"></span>
+                <span class="bz-wz">完成</span>
+
+            </div>
+
+            <!-- 填写信息框 -->
+            <div class="xx-box info-box col-md-4 col-md-offset-4">
+                <div class="yzm-box row">
+                    <span class="col-md-3">手机号码:</span>
+                    <div class="sj-box col-md-6">
+                        <input class=" sj-sr sl" type="text" style="width:100%;">
+                        <span class="sj-ts font_family icon-judge_failed_small">手机号码不正确</span>
+                    </div>
+
+
+                      <button class="col-md-3 fsyym verification" id="code">获取验证码</button>
+                </div>
+
+                <div class="yzm-box row">
+                    <span class="col-md-3">验证码:</span>
+                    <div class="sj-box col-md-6">
+                        <input class=" sj-sr sl" type="text" style="width:100%;">
+
+                    </div>
+                      <span class="yzm-ts ts col-md-3 font_family icon-judge_failed_small">验证码不正确</span>
+                </div>
+
+               <!-- 确定 -->
+               <button class="col-md-6 col-md-offset-3 confirm" type="button">确定</button>
+            </div>
+
+            <!-- 修改密码 -->
+            <div class="xgmm-box info-box col-md-4 col-md-offset-4" style="display:none;">
+                <div class="yzm-box row">
+                    <span class="col-md-3">新的登录密码:</span>
+                    <div class="sj-box col-md-6">
+                        <input class=" sj-sr sl" type="text" style="width:100%;" placeholder="">
+                    </div>
+
+                </div>
+
+                <div class="yzm-box row">
+                    <span class="col-md-3" style="padding: 0;">确认新的登录密码:</span>
+                    <div class="sj-box col-md-6">
+                        <input class=" sj-sr sl" type="text" style="width:100%;">
+
+                    </div>
+                      <span class="mm-ts ts col-md-2 font_family icon-judge_failed_small">两次密码不匹配</span>
+                </div>
+
+               <!-- 确定 -->
+               <button class="col-md-6 col-md-offset-3 confirm" type="button">确定</button>
+
+
+            </div>
+
+
+            <!-- 密码修改成功 -->
+            <div class="success-box info-box col-md-4 col-md-offset-4" style="display:none;">
+                <span class="font_family icon-judge_success_small"></span>
+                <h6>密码修改成功</h6>
+                <a href="../login.html" class="confirm">重新登录</a>
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../dist/js/staffManage.js"></script>
+<script>
+    // 发送验证码
+    $('.yzm-box').find('button.fsyym').click(function() {
+
+        var $send = $(this);
+        var T = 60;
+        $send.addClass('verification-no').html('重新发送(' + T + ')s');
+        $('.yzm-box').find('button.fsyym').attr('disabled', 'true');
+        var T = 60;
+        var GetVerifyCodeTimeLeft = setInterval(function() {
+            T--;
+            if (T == 0) {
+                $('.yzm-box').find('button.fsyym').removeAttr('disabled', 'true');
+                clearInterval(GetVerifyCodeTimeLeft);
+                $send.removeClass('verification-no').html('重新发送');
+            } else {
+                $send.html('重新发送(' + T + ')s');
+            }
+        }, 1000);
+    })
+
+</script>
+
+
+
+
+
+
+
+

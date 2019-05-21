@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+<!--     <link rel="stylesheet" type="text/css" href="../../dist/css/chat1.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/message.css"> -->
+
+    <link rel="stylesheet" type="text/css" href="../../src/css/noneCustomer.css">
+
+
+    <script src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body class="">
+    <!-- 导航start -->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">感玩客服</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-offset-6 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="">商品销售报表</a></li>
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+
+    <!-- 导航下面内容 -->
+    <div class="con">
+        <div class="left">
+            <!-- 暂无客服 -->
+            <div class="non-people">
+                <span class="glyphicon glyphicon-folder-close"></span>
+                <h4>我的对话</h4>
+                <span>0 人</span>
+            </div>
+            <div class="chatBox-info" style="display:flex;justify-content: space-between;">
+                <!-- 好友列表 -->
+                <div class="chatBox-list" ref="chatBoxlist">
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                     <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                     <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                    <div class="chat-list-people">
+                        <div class="people-box">
+                            <!-- avatar -->
+                            <div class='tx-box'>
+                                <img src="../../dist/images/tx.jpg" alt="头像"/>
+                            </div>
+                            <!-- infomation -->
+                            <div class="chat-name">
+                                <p class="sl">毛毛454545</p>
+                                <span class="mess-info sl">请问下我上次买的SRacer到货78787878787…</span>
+                                <span class="mm-info">周大侠</span>
+                            </div>
+                            <div class="message-num"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 聊天信息框 -->
+        <div class="right-r" >
+            <!-- 暂无客户时出现 -->
+            <div class="non-img" style="display:none;">
+                <img src="" alt="">
+                <h6>暂无客户</h6>
+            </div>
+
+            <!-- 欢迎 welcome -->
+            <img src="../../dist/images/welcome.jpg" alt="" style="display:none;">
+
+
+            <div class="right-msg">
+                <!-- 消息聊天框头部 -->
+                <div class="msg-head">
+                    <img src="../../dist/images/tx.jpg" alt="" class="avatrar-people" />
+                    <h6 class="name-people">鹿园</h6>
+
+                </div>
+
+                <!-- 消息聊天发送界面 -->
+                <div class="chatBox-kuang" ref="chatBoxkuang" style="width:100%">
+                    <div class="chatBox-content">
+                        <div class="chatBox-content-demo" id="chatBox-content-demo" style="padding:0 24px;">
+                            <div class="clearfloat">
+                                <div class="right">
+                                    <div class='chat-nick'>周大侠</div>
+                                    <div class="chat-message">在的亲，有什么需要帮助嘛？</div>
+                                </div>
+                                 <div class="author-name">
+                                    <small class="chat-date">2017-12-02 14:26:58</small>
+                                </div>
+                            </div>
+
+                            <div class="clearfloat">
+                                <div class="left-msg">
+                                    <div class="chat-nick">鹿园</div>
+                                    <div class="chat-message">
+                                        我昨天上午，在你们平台上买了一套车子和遥控器。今天收到货的时候准备试一下的，谁知道连了半天怎么都连不上！而且按照说明书上的操作步骤也没反应！！从来没见过 这样的情况发生！
+                                    </div>
+                                </div>
+
+                                <!-- 发送时间 -->
+                                <div class="author-name">
+                                    <small class="chat-date">2017-12-02 14:26:58</small>
+                                </div>
+                            </div>
+
+                            <div class="clearfloat">
+                                <div class="left-msg">
+                                    <div class="chat-nick">鹿园</div>
+                                    <div class="chat-message">
+                                         给你看张图212121121
+                                    </div>
+                                </div>
+                                <div class="author-name">
+                                    <small class="chat-date">2017-12-02 14:26:58</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 发送框体 -->
+                        <div class="chatBox-send">
+                            <!-- 表情图片盒子 -->
+                            <div class="bq-box">
+                                 <!-- 发送表情 -->
+                                <button id="chat-biaoqing" class="btn-default-styles">
+                                    表情
+                                </button>
+
+                                <!-- 发送图片 -->
+                                <label id="chat-tuxiang" title="发送图片" for="inputImage" class="btn-default-styles">
+                                    <input type="file" onchange="selectImg(this)" accept="image/jpg,image/jpeg,image/png"
+                                           name="file" id="inputImage" class="hidden">
+                                        发送图片
+                                </label>
+                                <div class="biaoqing-photo" style="display:block;">
+                                    <ul>
+                                        <li><span class="emoji-picker-image" style="background-position: -9px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -40px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -71px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -102px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -133px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -164px -18px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -9px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -40px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -71px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -102px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -133px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -164px -52px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -9px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -40px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -71px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -102px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -133px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -164px -86px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -9px -120px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -40px -120px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -71px -120px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -102px -120px;"></span>
+                                        </li>
+                                        <li><span class="emoji-picker-image" style="background-position: -133px -120px;"></span>
+                                        </li>
+                                        <li><span class="emoji-picker-image" style="background-position: -164px -120px;"></span>
+                                        </li>
+                                        <li><span class="emoji-picker-image" style="background-position: -9px -154px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -40px -154px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -71px -154px;"></span></li>
+                                        <li><span class="emoji-picker-image" style="background-position: -102px -154px;"></span>
+                                        </li>
+                                        <li><span class="emoji-picker-image" style="background-position: -133px -154px;"></span>
+                                        </li>
+                                        <li><span class="emoji-picker-image" style="background-position: -164px -154px;"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 文本域 -->
+                            <div class="div-textarea" contenteditable="true"></div>
+                            <!-- 发送按钮 -->
+                            <button id="chat-fasong" class="btn-default-styles">
+                                发送
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="youce">
+            <div class="slide-box">
+                <div class="slide-li customer slide-li-active">
+                    客户信息
+                </div>
+                <div class="slide-li chat">
+                    聊天记录
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+    //发送表情
+    $("#chat-biaoqing").click(function () {
+        $(".biaoqing-photo").toggle();
+    });
+    $(document).click(function () {
+        $(".biaoqing-photo").css("display", "none");
+    });
+    $("#chat-biaoqing").click(function (event) {
+        event.stopPropagation();//阻止事件
+    });
+
+    $(".emoji-picker-image").each(function () {
+        $(this).click(function () {
+            var bq = $(this).parent().html();
+            console.log(bq)
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                "<div class=\"right\"> <div class=\"chat-message\"> " + bq + " </div> " +
+                "<div class=\"chat-avatars\"><img src=\"img/icon01.png\" alt=\"头像\" /></div> </div> </div>");
+            //发送后关闭表情框
+            $(".biaoqing-photo").toggle();
+            //聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+        })
+    });
+    // 发送图片
+    function selectImg(pic) {
+        if (!pic.files || !pic.files[0]) {
+            return;
+        }
+        var fileData = pic.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function (evt) {
+            var images = evt.target.result;
+            console.log(images);
+
+            $(".chatBox-content-demo").append("<div class=\"clearfloat\">" +
+                "<div class=\"author-name\"><small class=\"chat-date\">2017-12-02 14:26:58</small> </div> " +
+                "<div class=\"right\"> <div class=\"chat-message\"><img src=" + images + "></div> " +
+                "<div class=\"chat-avatars\"><img src=\"img/icon01.png\" alt=\"头像\" /></div> </div> </div>");
+            //聊天框默认最底部
+            $(document).ready(function () {
+                $("#chatBox-content-demo").scrollTop($("#chatBox-content-demo")[0].scrollHeight);
+            });
+        };
+        reader.readAsDataURL(pic.files[0]);
+    }
+
+</script>

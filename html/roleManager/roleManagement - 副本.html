@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" href="../../dist/css/public/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.mobile.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/jqueryui.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+</head>
+<body>
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .table-bordered>thead>tr>th {
+        border-bottom-width: 1px;
+    }
+    tbody.list_son td.color-attr{
+        padding-left:64px !important;
+    }
+    tbody.list_son{
+        display:none;
+    }
+</style>
+
+
+
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;padding:0;">
+        <div class="row">
+            <!-- 左侧菜单 sm>=768px-->
+            <div class="col-md-10  col-sm-12 col-xs-12 col-md-offset-1 left-menubox" style="border-right:0;margin-top:100px;">
+                <div class="row">
+                      <!-- table表格 -->
+                    <table class="col-md-12 table table-bordered">
+                        <thead>
+                            <tr>
+                                <th class="col-md-6">名称</th>
+                                <th class="col-md-3">排序</th>
+                                <th class="col-md-3">操作</th>
+                            </tr>
+                        </thead>
+                        <tbody class="">
+                            <tr>
+                                <td class="col-md-8 font_family icon-arrow_down_solid list_dad cursor">颜色</td>
+                                <td>排序</td>
+                                <td class="col-md-4"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+
+                        </tbody>
+                        <tbody class="list_son">
+                            <tr style="border-top:0;">
+                                <td class="col-md-6 color-attr">白色</td>
+                                <td>排序</td>
+                                <td class="col-md-3"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+                             <tr>
+                                <td class="col-md-8 color-attr">黑色</td>
+                                <td>排序</td>
+                                <td class="col-md-4"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+                        </tbody>
+                        <tbody class="">
+                            <tr>
+                                <td class="col-md-6 font_family icon-arrow_down_solid list_dad cursor">颜色</td>
+                                <td class='col-md-3'>排序</td>
+                                <td class="col-md-3"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+                          <!--    <tr>
+                                <td class="col-md-8">颜色</td>
+                                <td class="col-md-4"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr> -->
+                        </tbody>
+                        <tbody class="list_son">
+                            <tr style="border-top:0;">
+                                <td class="col-md-8 color-attr">白色</td>
+                                <td>排序</td>
+                                <td class="col-md-4"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+                             <tr>
+                                <td class="col-md-8 color-attr">黑色</td>
+                                <td>排序</td>
+                                <td class="col-md-4"><span>添加</span><span>删除</span><span>编辑</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+
+<script>
+
+    $(".list_dad").on("click", function() {
+        $('.list_son').stop();
+        if ($(this).parent().parent().attr("id") == "open") {
+            $(this).parent().parent().removeAttr("id").siblings(".list_son").hide();
+        } else {
+            $(this).parent().parent().attr("id", "open").next().show().siblings(".list_son").hide();
+        }
+    });
+</script>
+
+
+
+
+

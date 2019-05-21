@@ -1,0 +1,70 @@
+/*
+* @Author: Marte
+* @Date:   2018-08-07 15:32:06
+* @Last Modified by:   Marte
+* @Last Modified time: 2018-08-10 15:30:36
+*/
+.bottom-menu .boxa-left{
+    padding-right:0;
+}
+.search-k {
+    width: 432px;
+}
+.bottom-menu .right-box .search-box {
+    width: 320px;
+    height: 32px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.15);
+}
+
+/*表格样式*/
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
+    padding:0px;
+    line-height: 40px;
+    box-sizing:border-box;
+}
+.table thead tr th{
+    font-size: 14px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.85);
+}
+.table thead tr th:nth-child(1){
+    padding-left:24px;
+    box-sizing:border-box;
+}
+.table tbody tr{
+    cursor:pointer;
+}
+.table tbody tr td{
+    font-size: 12px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: normal;
+    color: rgba(0, 0, 0, 0.65);
+}
+.table tbody tr td:nth-child(1){
+    padding-left:24px;
+}
+.table-responsive .table thead tr th:nth-child(1),.table-responsive .table thead tr th:nth-child(2),.table-responsive .table thead tr th:nth-child(3),.table-responsive .table thead tr th:nth-child(4),.table-responsive .table thead tr th:nth-child(5){
+    max-width:320px;
+}
+
+.table-responsive .table thead tr th:nth-child(7){
+    max-width:270px;
+}
+
+
+.table-responsive .table tbody tr th:nth-child(1),.table-responsive .table tbody tr th:nth-child(2),.table-responsive .table tbody tr th:nth-child(3),.table-responsive .table tbody tr th:nth-child(4),.table-responsive .table tbody tr th:nth-child(5){
+    max-width:320px;
+}
+
+.table-responsive .table tbody tr th:nth-child(7){
+    max-width:270px;
+}
+
+/*table end*/
+

@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="renderer" comtent="webkit"/>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=EDGE"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=0"/>
+    <title>Senseplay</title>
+    <link href="../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.common.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.min.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/kendo.default.mobile.min.css">
+
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/myfonts/iconfont.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/staffManage.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/header.css">
+    <link rel="stylesheet" type="text/css" href="../../dist/css/addstaff1.css">
+
+    <link rel="stylesheet" href="../../dist/css/public/kendo.common-material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.min.css" />
+    <link rel="stylesheet" href="../../dist/css/public/kendo.material.mobile.min.css" />
+
+</head>
+<body style="overflow-y:auto;">
+<style type="text/css">
+    .open{
+        background:;
+    }
+    .nav-header{
+        position:absolute;
+        top:0;
+        left:0;
+        right:0;
+        z-index:9999;
+    }
+</style>
+<!--导航开始-->
+<nav class="nav-header">
+    <!-- 左侧 -->
+    <div class="left-logo">
+        <span class="icon-menu font_family icon-menu_home cursor"></span>
+        <h3 class="H3LSWhite">基础设置</h3>
+    </div>
+    <!-- 中间菜单  -->
+    <ul class="m-menu">
+        <li class="items cursor items-active">员工管理</li>
+        <li class="items cursor">职位管理</li>
+        <li class="items cursor">角色管理</li>
+        <li class="items cursor">组织机构</li>
+
+    </ul>
+    <!-- 右侧个人中心 -->
+    <div class="right-menu">
+        <div class="drap-box cursor">
+            <span class="icon-user font_family"></span>
+            <h4 class="sl">username</h4>
+            <span class="icon-arrow_down_solid font_family"></span>
+            <!-- 下拉菜单选项 -->
+        <!--     <ul class="drap-menu">
+                <li>个人中心</li>
+                <li>退出登录</li>
+            </ul> -->
+        </div>
+    </div>
+
+</nav>
+<!--导航结束-->
+
+    <!-- 内容区 -->
+    <div class="container-fluid" style="flex-grow:1;margin-top:64px;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu">
+            <h4>员工管理 / 添加员工 </h4>
+
+            <div class="right-box">
+                <div class="add-btn cursor">
+                    <a href="stafflist.html" style="color:#fff;">返回列表</a>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="row col-md-9 col-md-offset-2" style="padding-left:24px;padding-right:24px;">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="row content-wrap">
+                    <h4 class="col-md-3 T1RRTittle">员工姓名：</h4>
+                    <div class="col-md-9 input-box">
+                        <input type="text" name="" placeholder="请输入员工姓名" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">手机号：</h4>
+                    <div class="col-md-9 input-box">
+                        <input type="number" name="" placeholder="请输入手机号，同时用于账号登录" class="sl shuru">
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+                    </div>
+                </div>
+
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">生日&nbsp;<span>(选填)</span> &nbsp;：</h4>
+                    <div class="col-md-9 input-box" style="padding:0;min-height:40px;height:auto;">
+               <!--          <div id="example">
+                            <div class="demo-section k-content">
+                                <input id="datepicker" value="10/10/2011" title="datepicker" style="width: 100%" />
+                            </div>
+                        </div> -->
+
+                    </div>
+                </div>
+
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">所属部门：</h4>
+                    <div class="col-md-9 input-box" style="padding:0;min-height:40px;height:auto;">
+                        <div id="example">
+                            <div id="cap-view" class="demo-section k-content">
+                                <input id="dropdowntree" style="width: 100%;" />
+                            </div>
+                        </div>
+                        <span class="ts">
+                            *请输入正确的出参数
+                        </span>
+
+                    </div>
+                </div>
+            </div>
+            <!-- 员工工号 -->
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">员工工号：</h4>
+                    <div class="col-md-9 input-box" style="line-height:40px;border:0;padding-left: 0;">
+                        0000
+                    </div>
+                </div>
+                <!-- 员工状态 -->
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">员工状态：</h4>
+                    <div class="col-md-9 input-box status" style="padding-left: 0;">
+                        <div class="male">
+                            <input type="radio" id="female" name="bjjb" checked value="1"/>
+                            <label for="female" style="font-size:14px">在职</label>
+                        </div>
+
+                        <div class="male" style="margin-left:38px;">
+                            <input type="radio" id="male" name="bjjb" value="2"/>
+                            <label for="male" style="font-size:14px">离职</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- 性别 -->
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 T1RRTittle">性别&nbsp;<span>(选填)</span> &nbsp;：</h4>
+                 <!--    <div class="col-md-9 input-box select-input">
+                        <span class="font_family con-arrow_open_line"></span>
+                    </div> -->
+                    <select name=""  class="col-md-9 col-xs-12 input-box select-input" style="outline:none;">
+                        <option value="" >请选择</option>
+                        <option value="">男</option>
+                        <option value="">女</option>
+                    </select>
+                </div>
+                <!-- 职位 -->
+                <div class="row content-wrap ">
+                    <h4 class="col-md-3 col-xs-12 T1RRTittle">职位&nbsp;<span>(选填)</span> &nbsp;：</h4>
+                     <select name=""  class="col-md-9 col-xs-12 input-box select-input" style="outline:none;">
+                        <option value="" >请选择</option>
+                        <option value="">财务 </option>
+                        <option value="">经理</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="row col-md-9 col-md-offset-2 " style="padding-left:24px;padding-right:24px;">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="row content-wrap">
+                    <h4 class="col-md-3 T1RRTittle">备注&nbsp;<span>(选填)</span> &nbsp;：</h4>
+                    <div class="col-md-9 input-box" style="height:200px;padding:0;">
+                        <textarea name="" style="width:98%; height:98%;resize:none;border:none;outline:none;padding:15px;"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 提交按钮 -->
+        <div class="row col-md-9 col-md-offset-2 text-box">
+            <button type="button" class="btn-tj">提交</button>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script type="text/javascript" src="../../dist/js/public/jquery-3.1.1.min.js"></script>
+<script src="../../dist/js/public/bootstrap.min.js"></script>
+<script src="../../dist/js/public/kendo.all.min.js"></script>
+<script src="../../dist/js/staffManage.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        $("#dropdowntree").kendoDropDownTree({
+            placeholder: "请选择",
+            checkboxes: true,
+            checkAll: false,
+            autoClose: false,
+            dataSource: [
+                {
+                    text: "Furniture", expanded: true, items: [
+                        { text: "Tables & Chairs" },
+                        { text: "Sofas" },
+                        { text: "Occasional Furniture" }
+                    ]
+                },
+                {
+                    text: "Decor", items: [
+                        { text: "Bed Linen" },
+                        { text: "Curtains & Blinds" },
+                        { text: "Carpets" }
+                    ]
+                }
+            ]
+        });
+    });
+
+    $(document).ready(function() {
+                // create DatePicker from input HTML element
+                $("#datepicker").kendoDatePicker();
+
+                $("#monthpicker").kendoDatePicker({
+                    // defines the start view
+                    start: "year",
+
+                    // defines when the calendar should return date
+                    depth: "year",
+
+                    // display month and year in the input
+                    format: "MMMM yyyy",
+
+                    // specifies that DateInput is used for masking the input element
+                    dateInput: true
+                });
+            });
+</script>
+
+
+
+
+

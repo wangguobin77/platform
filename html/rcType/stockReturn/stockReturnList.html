@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <title>SENSEPLAY</title>
+    <!-- kendo资源 -->
+    <link href="../../../dist/css/public/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/fonts.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/all.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/public/reset.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/myfonts/iconfont.css">
+
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/roleManagement.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/dialog.css">
+    <link rel="stylesheet" type="text/css" href="../../../dist/css/stockReturn.css">
+
+    <script src="../../../dist/js/public/jquery-3.1.1.min.js"></script>
+
+</head>
+
+<body class="">
+    <!-- 导航start -->
+    <div class="container-fluid nav-header">
+        <div class="row">
+            <div class="col-md-2 col-sm-6 col-xs-6" style="padding-left:0;">
+                <div class="left-logo">
+                    <span class="icon-menu font_family icon-menu_home cursor"></span>
+                    <h3 class="H3LSWhite">供应链</h3>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <ul class="m-menu" style="height:64px;">
+                    <li class="items cursor"><a href="../putStorage/chainList.html">入库</a></li>
+
+                    <li class="items cursor"><a href="../outStorage/outStorageList.html">出库</a></li>
+                    <li class="items cursor items-active"><a href="stockReturnList.html">退货</a></li>
+
+                </ul>
+            </div>
+            <div class="col-md-4 user-info-xx">
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">深圳隆昌模型制造厂</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+                <div class="userinfo-box">
+                    <span class="icon-user font_family"></span>
+                    <h4 class="sl">username</h4>
+                    <span class="icon-arrow_down_solid font_family"></span>
+                </div>
+            </div>
+
+            <!-- 小于992px时出现 -->
+            <div class="col-sm-6 col-xs-6 res-992-m-menu">
+                <!-- 面包屑导航按钮 -->
+                <span class="glyphicon glyphicon-align-justify bread-menu cursor"></span>
+
+            </div>
+            <div class="row res-992-m-menubox">
+                <ul class="col-sm-12">
+                    <li class="cursor"><a href="../putStorage/chainList.html">入库</a></li>
+                    <li class="cursor"><a href="../outStorage/outStorageList.html">出库</a></li>
+                    <li class="cursor"><a href="stockReturnList.html">退货</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+                            <span class="factory-xx sl">深圳隆昌模型制造厂</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                    <li class="dropdown">
+
+                        <a href="#" class="dropdown-li-a" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            <span class="dropdown-toggle glyphicon glyphicon-user"></span>
+
+                            <span class="factory-xx sl">周大侠</span>
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">修改手机号</a></li>
+                            <li><a href="#">修改密码</a></li>
+                            <li><a href="#">退出登录</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--导航结束-->
+    <div class="container-fluid" style="display:flex;flex-grow:1;flex-direction: column;padding:0;">
+        <!-- 导航下标注 -->
+        <div class="bottom-menu" style="margin-top:0;">
+            <h4>直接入库</h4>
+            <div class="right-box">
+                <div class="search-box">
+                    <span class=" glyphicon glyphicon-search"></span>
+                    <input type="text" name="" placeholder="搜索退货单号、订单号" style="border:0;outline:none;" class="sl">
+                </div>
+                <div class="btn-ss cursor">搜索</div>
+                <div class="add-btn cursor xszt">
+                    添加退货
+                </div>
+            </div>
+        </div>
+
+        <!-- 下面的列表  -->
+        <div class="table-responsive" style="padding:0 24px;">
+            <table class="table">
+                 <thead>
+                    <tr style=" background-color: rgba(0, 0, 0, 0.09); border: solid 1px rgba(0, 0, 0, 0.15);">
+                        <th  class="col-md-1 sl">退货单号</th>
+                        <th  class="col-md-2 sl">订单号</th>
+                        <th  class="col-md-2 sl">入库仓</th>
+                        <th  class="col-md-1 sl">创建时间 </th>
+                        <th  class="col-md-1 sl">退货时间 </th>
+                        <th  class="col-md-2 sl">经办人</th>
+                        <th  class="col-md-1 sl">状态</th>
+                        <th  class="col-md-2 sl">操作</th>
+                    </tr>
+                 </thead>
+
+                 <tbody>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                             <!--    <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                             <!--    <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                             <!--    <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                             <!--    <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <!-- 待审核 -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" style="">
+                          <!--   <div class="czuo-box" style="display: flex;align-items: center;justify-content: flex-end;">
+
+                                <a href="chainLog.html" class="font_family icon-operation_approval"
+                                ></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <!-- 草稿   -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                          <!--   <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+
+                    <!-- 拒绝   -->
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                           <!--  <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                             <!--    <div class="czuo-box">
+                                <a href="chainLog.html" class="font_family icon-operation_approval" style="float:right;"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                          <!--  <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                           <!-- <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">1231231230494</td>
+                        <td class="sl">创智天地2号仓 </td>
+
+                        <td class="sl">2018-07-10 15:25 </td>
+                        <td class="sl">2018-07-10 15:25</td>
+                        <td class="sl">徐尚 </td>
+
+                        <td class="sl zz-box"><span class="zaizhi rk">已退货</span></td>
+                        <td class="sl opr-box" >
+                           <!-- <div class="czuo-box"  style="display: flex;align-items: center;justify-content: flex-end;">
+
+                               <a href="chainLog.html" class="font_family icon-operation_approval"></a>
+                            </div> -->
+                        </td>
+                    </tr>
+
+                 </tbody>
+            </table>
+        </div>
+        <!-- 列表完 -->
+        <!-- 没有搜索到任何信息时出现 -->
+        <div class="none-info" style="display:none;">
+            <div class="row" style="display:flex;flex-wrap: wrap;justify-content: flex-start;padding:0 24px;">
+                <div class="none-info" style="margin:0 auto;">
+                    <img src="../../../dist/images/errorview-empty.png" alt="" >
+                    <h5 class="non-message">没有找到相关员工~</h5>
+                </div>
+            </div>
+        </div>
+        <!-- 没搜索到信息 end -->
+        <nav clas="footer" aria-label="..." style="padding-right:24px;" >
+            <ul class="pagination" style="float:right;">
+                <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true" class="font_family icon-arrow_left_thin"></span></a></li>
+                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">2<span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                <li ><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                <li class=""><a href="#" aria-label="Next"><span aria-hidden="true" class="font_family icon-arrow_right_thin"></span></a></li>
+
+            </ul>
+        </nav>
+
+    </div>
+    <!-- 扫码录入提示框 -->
+    <div class="del-box smlr-box">
+        <div class="dialog">
+            <span class="font_family icon-close cursor"></span>
+            <h4>请扫码录入订单码</h4>
+            <div class="text-k">
+                <input type="text" name="" class="sm-sr" placeholder="请录入订单码">
+                <span class="ts">*请输入正确的订单码</span>
+            </div>
+            <div class="operate-del">
+                <div class="cursor cancel"> 取消</div>
+                <div class="cursor confirm">确认</div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+
+    $('.del-box').find('.cancel').click(function(){
+        $('.delete').hide();
+        window.location.href="";
+    })
+
+    $('.del-box').find('.icon-close').click(function(){
+        $('.delete').hide();
+        window.location.href="";
+    })
+/*-------------------------------------------------扫码录入提示框 处理--------------------------*/
+    // 点击销售字体淡出提示框体
+    $('.xszt').click(function(){
+        $('.smlr-box').show();
+    })
+    // 点击确认进入销售自提详情
+
+    $('.smlr-box').find('div.confirm').click(function(){
+        var val=$('.sm-sr').val();
+        if(val!=""){
+            window.location.href="addStockReturn.html";
+        }else{
+            $(this).parent().prev().find('.ts').show();
+        }
+
+    })
+
+</script>
+</body>
+</html>
